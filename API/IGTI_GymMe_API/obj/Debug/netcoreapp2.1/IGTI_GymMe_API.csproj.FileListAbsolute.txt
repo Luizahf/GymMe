@@ -1,0 +1,3 @@
+C:\Users\Luiza\source\repos\IGTI_GymMe_API\IGTI_GymMe_API\obj\Debug\netcoreapp2.1\IGTI_GymMe_API.csproj.CoreCompileInputs.cache
+C:\Users\Luiza\source\repos\IGTI_GymMe_API\IGTI_GymMe_API\obj\Debug\netcoreapp2.1\IGTI_GymMe_API.AssemblyInfoInputs.cache
+C:\Users\Luiza\source\repos\IGTI_GymMe_API\IGTI_GymMe_API\obj\Debug\netcoreapp2.1\IGTI_GymMe_API.AssemblyInfo.cs

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="150dp"
+  app:cardCornerRadius="4dp"
+  app:cardUseCompatPadding="true">
+
+  <android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/repeticoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repeticoes"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/series"
+        app:layout_constraintTop_toBottomOf="@+id/series" />
+
+    <TextView
+        android:id="@+id/valorRepeticoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:text="@string/valorRepeticoes"
+        app:layout_constraintBottom_toBottomOf="@+id/series"
+        app:layout_constraintLeft_toRightOf="@+id/series"
+        app:layout_constraintStart_toEndOf="@+id/repeticoes"
+        app:layout_constraintTop_toBottomOf="@+id/valorSeries"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="450" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Agachamento" />
+
+    <TextView
+        android:id="@+id/carga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="Carga"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/valorCarga" />
+
+    <TextView
+        android:id="@+id/valorCarga"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        app:layout_constraintLeft_toRightOf="@+id/carga"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:text="@string/valorCarga" />
+
+    <TextView
+        android:id="@+id/series"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Series"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valorCarga" />
+
+    <TextView
+        android:id="@+id/valorSeries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="@string/valorSeries"
+        app:layout_constraintBottom_toBottomOf="@+id/series"
+        app:layout_constraintLeft_toRightOf="@+id/series"
+        app:layout_constraintTop_toTopOf="@+id/series"
+        tools:text="450" />
+
+    <ImageView
+      android:id="@+id/star"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="16dp"
+      android:layout_marginTop="8dp"
+      android:src="@drawable/ic_star_black_24dp"
+      android:visibility="invisible"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/valorCarga"/>
+
+  </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
