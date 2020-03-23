@@ -1,0 +1,9 @@
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Repositories\bin\Debug\netcoreapp2.1\Gymme.Repositories.deps.json
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Repositories\bin\Debug\netcoreapp2.1\Gymme.Repositories.dll
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Repositories\obj\Debug\netcoreapp2.1\Gymme.Repositories.csprojAssemblyReference.cache
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Repositories\obj\Debug\netcoreapp2.1\Gymme.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Repositories\obj\Debug\netcoreapp2.1\Gymme.Repositories.AssemblyInfoInputs.cache
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Repositories\obj\Debug\netcoreapp2.1\Gymme.Repositories.AssemblyInfo.cs
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Repositories\bin\Debug\netcoreapp2.1\Gymme.Repositories.pdb
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Repositories\obj\Debug\netcoreapp2.1\Gymme.Repositories.dll
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Repositories\obj\Debug\netcoreapp2.1\Gymme.Repositories.pdb

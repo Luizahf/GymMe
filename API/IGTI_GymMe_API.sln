@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGTI_GymMe_API", "IGTI_GymMe_API\IGTI_GymMe_API.csproj", "{79E11735-CFEE-43DA-B687-F1DDADB3C1CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gymme.Api", "Gymme.Api\Gymme.Api.csproj", "{447E71F3-18D3-4E9C-A286-0E6D66564248}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gymme.Domain", "Gymme.Domain\Gymme.Domain.csproj", "{9C5A201B-900E-4B1D-8E84-52B0836EA4D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gymme.Repositories", "Gymme.Repositories\Gymme.Repositories.csproj", "{CF9BC362-7211-4B1A-812E-557BC60B8291}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{79E11735-CFEE-43DA-B687-F1DDADB3C1CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{79E11735-CFEE-43DA-B687-F1DDADB3C1CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{79E11735-CFEE-43DA-B687-F1DDADB3C1CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{79E11735-CFEE-43DA-B687-F1DDADB3C1CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{447E71F3-18D3-4E9C-A286-0E6D66564248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{447E71F3-18D3-4E9C-A286-0E6D66564248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{447E71F3-18D3-4E9C-A286-0E6D66564248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{447E71F3-18D3-4E9C-A286-0E6D66564248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C5A201B-900E-4B1D-8E84-52B0836EA4D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C5A201B-900E-4B1D-8E84-52B0836EA4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C5A201B-900E-4B1D-8E84-52B0836EA4D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C5A201B-900E-4B1D-8E84-52B0836EA4D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF9BC362-7211-4B1A-812E-557BC60B8291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9BC362-7211-4B1A-812E-557BC60B8291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9BC362-7211-4B1A-812E-557BC60B8291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9BC362-7211-4B1A-812E-557BC60B8291}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

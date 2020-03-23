@@ -1,0 +1,9 @@
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\bin\Debug\netcoreapp2.1\Gymme.Domain.deps.json
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\bin\Debug\netcoreapp2.1\Gymme.Domain.dll
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.csprojAssemblyReference.cache
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.AssemblyInfoInputs.cache
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.AssemblyInfo.cs
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\bin\Debug\netcoreapp2.1\Gymme.Domain.pdb
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.dll
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.pdb
