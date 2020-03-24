@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Gymme.Domain.Commands.Ping;
+using Gymme.Domain.Commands.Users;
 using Gymme.Repositories.Abstractions;
 using Gymme.Repositories.Entities;
 using MediatR;
@@ -10,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Gymme.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/users")]
     [ApiController]
     public class UsersController : ControllerBase
     {
@@ -25,19 +26,18 @@ namespace Gymme.Api.Controllers
         }
 
         // GET api/values
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<ExerciseEntity>>> Get(PingCommand comando)
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<ExerciseEntity>>> Get(PingCommand comando)
+        //{
+        //    var result = await Mediator.Send(comando);
+        //    return Ok(result);
+        //}
+        
+        [HttpGet()]
+        public async Task<ActionResult<UserEntity>> Get(UserCommand comando)
         {
             var result = await Mediator.Send(comando);
-
             return Ok(result);
-        }
-
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
         }
 
         // POST api/values

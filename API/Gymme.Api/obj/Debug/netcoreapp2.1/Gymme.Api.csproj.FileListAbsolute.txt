@@ -17,3 +17,4 @@ C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Api\obj\Debug\netcorea
 C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Api\obj\Debug\netcoreapp2.1\Gymme.Api.pdb
 C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Api\bin\Debug\netcoreapp2.1\Gymme.Domain.dll
 C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Api\bin\Debug\netcoreapp2.1\Gymme.Domain.pdb
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Api\bin\Debug\netcoreapp2.1\Gymme.Api.xml

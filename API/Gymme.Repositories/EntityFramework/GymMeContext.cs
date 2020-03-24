@@ -24,7 +24,13 @@ namespace Gymme.Repositories.EntityFramework
             {
                 entity.ToTable("exercise");
                 entity.HasKey(e => e.Id);
-            }); 
+            });
+
+            modelBuilder.Entity<UserEntity>(entity =>
+            {
+                entity.ToTable("users");
+                entity.HasKey(e => e.Id);
+            });
         }
     }
 }

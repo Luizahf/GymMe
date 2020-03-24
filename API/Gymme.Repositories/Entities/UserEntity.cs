@@ -7,8 +7,8 @@ namespace Gymme.Repositories.Entities
     public class UserEntity : EntityBase
     {
         public string Name { get; set; }
-        public int Height { get; set; }
-        public int Weight { get; set; }
+        public int? Height { get; set; }
+        public int? Weight { get; set; }
         public Char? Gender { get; set; }
 
         internal override IEnumerable<string> CheckIntegrity()

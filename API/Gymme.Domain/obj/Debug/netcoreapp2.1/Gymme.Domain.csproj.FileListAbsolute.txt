@@ -7,3 +7,6 @@ C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\obj\Debug\netco
 C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\bin\Debug\netcoreapp2.1\Gymme.Domain.pdb
 C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.dll
 C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.pdb
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\bin\Debug\netcoreapp2.1\Gymme.Repositories.dll
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\bin\Debug\netcoreapp2.1\Gymme.Repositories.pdb
+C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.csproj.CopyComplete
