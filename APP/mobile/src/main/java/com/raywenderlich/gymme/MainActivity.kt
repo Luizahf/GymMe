@@ -33,21 +33,11 @@ package com.raywenderlich.gymme
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
 
-class ListaExerciciosActivity : AppCompatActivity(), ListaExerciciosAdapter.Callback {
-  private var adapter: ListaExerciciosAdapter? = null
+class MainActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_main)
-    val exercicios = Store.obterExercicios(this)
-    adapter = ListaExerciciosAdapter(exercicios, this)
-    list.adapter = adapter
-    list.layoutManager = LinearLayoutManager(this)
-  }
-
-  override fun clicouExercicio(exercicio: Exercicio) {
-    // TODO
+    setContentView(R.layout.activity_splash_screen)
   }
 }

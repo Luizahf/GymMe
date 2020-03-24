@@ -37,11 +37,4 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 
 object Store {
-
-  fun obterExercicios(context: Context): MutableList<Exercicio> {
-    val stream = context.resources.openRawResource(R.raw.exericios)
-    val reader = BufferedReader(InputStreamReader(stream, "UTF-8"))
-    val listType = object : TypeToken<ArrayList<Exercicio>>() {}.type
-    return Gson().fromJson(reader, listType)
-  }
 }
