@@ -10,7 +10,18 @@ namespace Gymme.Repositories.Queries.GetWorkSheetExercises
     {
         public async Task<List<WorksheetExerciseEntity>> Execute(GetWorkSheetExercisesQueryInput input)
         {
-            throw new NotImplementedException();
+            using (var context = new WorksheetExerciseEntity())
+            {
+                var query = context.Students
+                                   .where(s => s.StudentName == "Bill")
+                                   .FirstOrDefault<Student>();
+            }
+
+            return new List<WorksheetExerciseEntity>()
+            {
+                new WorksheetExerciseEntity()
+                {}
+            };
         }
     }
 }

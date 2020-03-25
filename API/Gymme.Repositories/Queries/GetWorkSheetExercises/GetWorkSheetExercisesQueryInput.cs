@@ -7,5 +7,10 @@ namespace Gymme.Repositories.Queries.GetWorkSheetExercises
     public class GetWorkSheetExercisesQueryInput : IQueryInput<List<WorksheetExerciseEntity>>
     {
         public int WorksheetId { get; set; }
+
+        public GetWorkSheetExercisesQueryInput(int worksheetId)
+        {
+            WorksheetId = worksheetId;
+        }
     }
 }

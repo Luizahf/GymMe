@@ -34,4 +34,5 @@
     <color name="colorAccent">#8BC34A</color>
     <color name="white">#f0f0f0</color>
     <color name="grey">#7A7A7A</color>
+    <color name="light_grey">#AFAEAE</color>
 </resources>

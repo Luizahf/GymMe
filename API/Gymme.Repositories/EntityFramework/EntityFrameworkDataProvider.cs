@@ -4,7 +4,6 @@ using Gymme.Repositories.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Gymme.Repositories.EntityFramework
@@ -12,10 +11,12 @@ namespace Gymme.Repositories.EntityFramework
     internal class EntityFrameworkDataProvider : IDataProvider
     {
         GymMeContext Context { get; }
+        IServiceProvider ServiceLocator { get; }
 
-        public EntityFrameworkDataProvider(GymMeContext context)
+        public EntityFrameworkDataProvider(GymMeContext context, IServiceProvider serviceLocator)
         {
             Context = context;
+            ServiceLocator = serviceLocator;
         }
 
         public void DeleteById(int id)
@@ -23,12 +24,11 @@ namespace Gymme.Repositories.EntityFramework
             throw new NotImplementedException();
         }
 
-        public IEnumerable<T> GetAll<T>() where T : EntityBase => 
+        public IEnumerable<T> GetAll<T>() where T : EntityBase =>
             Context.Set<T>().ToList();
-  
+
         public T GetById<T>(int id) where T : EntityBase
         {
-            // Estudar os metodos do entity
             return Context.Set<T>().Find(id);
         }
 
@@ -41,14 +41,43 @@ namespace Gymme.Repositories.EntityFramework
             return validation;
         }
 
-        public Task<T> Query<T>(IQueryInput<T> query)
-        {
-            throw new NotImplementedException();
-        }
-
         public EntityValidationResult Update<T>(T entity) where T : EntityBase
         {
             throw new NotImplementedException();
         }
+
+        public async Task<TOutput> Query<TOutput>(IQueryInput<TOutput> query)
+        {
+            const string QueryHandlerMethod = "Execute";
+
+            if (TryGetQueryHandler(query, out object handler))
+            {
+                var handerType = handler.GetType();
+                
+                var queryMethod = handerType.GetMethod(QueryHandlerMethod);
+                
+                return await (Task<TOutput>)queryMethod.Invoke(handler, new object[] { query });
+            }
+
+            return default;
+        }
+
+        #region .:: Get Handler Reflection ::.
+        
+        private static Type QueryHandlerType = typeof(IQueryHandler<,>);
+
+        private bool TryGetQueryHandler<TOutput>(IQueryInput<TOutput> query, out object handler)
+        {
+            handler = null;
+            
+            var queryOutputType = typeof(TOutput);
+            
+            var queryInputType = query.GetType();
+            
+            handler = ServiceLocator.GetService(QueryHandlerType.MakeGenericType(queryInputType, queryOutputType));
+            return handler != null;
+        }
+
+        #endregion
     }
 }

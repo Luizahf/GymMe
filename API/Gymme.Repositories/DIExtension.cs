@@ -19,10 +19,22 @@ namespace Gymme.Repositories
         private static void InjectQueries(IServiceCollection services)
         {
             var assembly = typeof(DIExtension).Assembly;
-            var queryHandler = assembly.GetTypes().Where(w => w.IsAssignableFrom(typeof(IQueryHandler<,>)));
-            foreach (var queryType in queryHandler)
-                foreach (var queryTypeInterface in queryType.GetInterfaces())
-                    services.AddTransient(queryTypeInterface, queryType);
+            
+            var queryInterface = typeof(IQueryHandler<,>);
+            
+            var queryDI = assembly.GetTypes()
+                                  .Select(s => new
+                                  {
+                                      Implementation = s,
+                                      Services = s.GetInterfaces()
+                                                  .Where(w => w.IsGenericType
+                                                           && w.GetGenericTypeDefinition() == queryInterface)
+                                  })
+                                  .Where(w => w.Services.Any());
+
+            foreach (var dependecy in queryDI)
+                foreach (var serviceType in dependecy.Services)
+                    services.AddTransient(serviceType, dependecy.Implementation);
         }
     }
 }
