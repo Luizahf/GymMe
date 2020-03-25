@@ -1,6 +1,7 @@
 ﻿using Gymme.Repositories.Abstractions.Query;
 using Gymme.Repositories.Base;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Gymme.Repositories.Abstractions
 {
@@ -38,6 +39,6 @@ namespace Gymme.Repositories.Abstractions
         /// <summary>
         /// Executes given query at the source.
         /// </summary>
-        T Query<T>(IQueryInput<T> query) where T : EntityBase;
+        Task<T> Query<T>(IQueryInput<T> query);
     }
 }

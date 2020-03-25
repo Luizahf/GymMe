@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Gymme.Repositories.EntityFramework
 {
@@ -40,7 +41,7 @@ namespace Gymme.Repositories.EntityFramework
             return validation;
         }
 
-        public T Query<T>(IQueryInput<T> query) where T : EntityBase
+        public Task<T> Query<T>(IQueryInput<T> query)
         {
             throw new NotImplementedException();
         }

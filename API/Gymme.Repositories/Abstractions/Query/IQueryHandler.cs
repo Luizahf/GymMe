@@ -1,7 +1,9 @@
-﻿namespace Gymme.Repositories.Abstractions.Query
+﻿using System.Threading.Tasks;
+
+namespace Gymme.Repositories.Abstractions.Query
 {
     public interface IQueryHandler<QueryType, QueryResultType> where QueryType : IQueryInput<QueryResultType>
     {
-        QueryResultType Execute(QueryType input);
+        Task<QueryResultType> Execute(QueryType input);
     }
 }

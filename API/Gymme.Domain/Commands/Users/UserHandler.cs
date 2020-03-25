@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Gymme.Domain.Commands.Users
 {
-    internal class UserHandler : IRequestHandler<UserCommand, UserEntity>
+    internal class ExerciseHandler : IRequestHandler<ExerciseCommand, UserEntity>
     {
         private IDataProvider DataProvider { get; }
 
-        public UserHandler(IDataProvider dataProvider)
+        public ExerciseHandler(IDataProvider dataProvider)
         {
             DataProvider = dataProvider;
         }
 
-        public Task<UserEntity> Handle(UserCommand request, CancellationToken cancellationToken)
+        public Task<UserEntity> Handle(ExerciseCommand request, CancellationToken cancellationToken)
         {
             var result = new UserEntity();
 

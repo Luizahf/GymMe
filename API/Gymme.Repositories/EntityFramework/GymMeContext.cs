@@ -10,6 +10,7 @@ namespace Gymme.Repositories.EntityFramework
         public DbSet<ExerciseEntity> ExerciseEntity { get; set; }
         public DbSet<PracticeEntity> PracticeEntity { get; set; }
         public DbSet<WorksheetEntity> WorksheetEntity { get; set; }
+        public DbSet<WorksheetExerciseEntity> WorksheetExerciseEntity { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,6 +30,12 @@ namespace Gymme.Repositories.EntityFramework
             modelBuilder.Entity<UserEntity>(entity =>
             {
                 entity.ToTable("users");
+                entity.HasKey(e => e.Id);
+            });
+
+            modelBuilder.Entity<WorksheetExerciseEntity>(entity =>
+            {
+                entity.ToTable("worksheet_exercise");
                 entity.HasKey(e => e.Id);
             });
         }

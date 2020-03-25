@@ -6,6 +6,7 @@ using Gymme.Domain.Commands.Ping;
 using Gymme.Domain.Commands.Users;
 using Gymme.Repositories.Abstractions;
 using Gymme.Repositories.Entities;
+using Gymme.Repositories.Queries.GetWorkSheetExercises;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,9 +35,16 @@ namespace Gymme.Api.Controllers
         //}
         
         [HttpGet()]
-        public async Task<ActionResult<UserEntity>> Get(UserCommand comando)
+        public async Task<ActionResult<UserEntity>> Get(ExerciseCommand comando)
         {
             var result = await Mediator.Send(comando);
+            return Ok(result);
+        }
+
+        [HttpGet()]
+        public async Task<ActionResult<List<WorksheetExerciseEntity>>> Get(GetWorkSheetExercisesQueryInput query)
+        {
+            var result = await DataProvider.Query(query);
             return Ok(result);
         }
 
