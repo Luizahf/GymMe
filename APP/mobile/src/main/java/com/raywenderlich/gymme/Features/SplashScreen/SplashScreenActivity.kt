@@ -1,13 +1,12 @@
-package com.raywenderlich.gymme.SplashScreen
+package com.raywenderlich.gymme.Features.SplashScreen
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.Button
-import com.raywenderlich.gymme.MyWorksheet.MyWorksheetActivity
+import com.raywenderlich.gymme.Features.MyWorksheet.MyWorksheetActivity
 import com.raywenderlich.gymme.R
-import com.raywenderlich.gymme.StartExercisesActivity
+import com.raywenderlich.gymme.Features.StartExercises.StartExercisesActivity
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreenActivity : AppCompatActivity(), View.OnClickListener {
@@ -28,12 +27,18 @@ class SplashScreenActivity : AppCompatActivity(), View.OnClickListener {
                 goToWorksheetExercises()
             }
             R.id.btn_new_workout -> {
-                startActivity(Intent(this, StartExercisesActivity::class.java))
+                goToNewWorkout()
             }
         }
     }
 
     fun goToWorksheetExercises() {
+
         startActivity(Intent(this, MyWorksheetActivity::class.java))
+    }
+
+    fun goToNewWorkout() {
+
+        startActivity(Intent(this, StartExercisesActivity::class.java))
     }
 }

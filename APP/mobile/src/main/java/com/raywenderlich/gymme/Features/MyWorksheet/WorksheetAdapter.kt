@@ -1,15 +1,11 @@
-package com.raywenderlich.gymme.MyWorksheet
+package com.raywenderlich.gymme.Features.MyWorksheet
 
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.ListView
 import com.raywenderlich.gymme.R
 import kotlinx.android.synthetic.main.worksheet_layout.view.*
 import java.util.ArrayList

@@ -7,3 +7,11 @@ C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Repositories\obj\Debug
 C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Repositories\bin\Debug\netcoreapp2.1\Gymme.Repositories.pdb
 C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Repositories\obj\Debug\netcoreapp2.1\Gymme.Repositories.dll
 C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Repositories\obj\Debug\netcoreapp2.1\Gymme.Repositories.pdb
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Repositories\bin\Debug\netcoreapp2.1\Gymme.Repositories.deps.json
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Repositories\bin\Debug\netcoreapp2.1\Gymme.Repositories.dll
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Repositories\bin\Debug\netcoreapp2.1\Gymme.Repositories.pdb
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Repositories\obj\Debug\netcoreapp2.1\Gymme.Repositories.csprojAssemblyReference.cache
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Repositories\obj\Debug\netcoreapp2.1\Gymme.Repositories.AssemblyInfoInputs.cache
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Repositories\obj\Debug\netcoreapp2.1\Gymme.Repositories.AssemblyInfo.cs
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Repositories\obj\Debug\netcoreapp2.1\Gymme.Repositories.dll
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Repositories\obj\Debug\netcoreapp2.1\Gymme.Repositories.pdb

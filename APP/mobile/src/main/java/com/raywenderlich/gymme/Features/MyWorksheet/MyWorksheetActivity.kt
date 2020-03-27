@@ -1,4 +1,4 @@
-package com.raywenderlich.gymme.MyWorksheet
+package com.raywenderlich.gymme.Features.MyWorksheet
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +6,6 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.raywenderlich.gymme.R
-import java.util.*
 
 class MyWorksheetActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var worksheetsRecyclerView: RecyclerView

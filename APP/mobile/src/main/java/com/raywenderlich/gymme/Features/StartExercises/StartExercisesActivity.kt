@@ -1,7 +1,8 @@
-package com.raywenderlich.gymme
+package com.raywenderlich.gymme.Features.StartExercises
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.raywenderlich.gymme.R
 
 class StartExercisesActivity : AppCompatActivity() {
 

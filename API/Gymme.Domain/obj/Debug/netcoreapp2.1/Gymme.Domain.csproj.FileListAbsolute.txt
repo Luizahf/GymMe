@@ -10,3 +10,14 @@ C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\obj\Debug\netco
 C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\bin\Debug\netcoreapp2.1\Gymme.Repositories.dll
 C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\bin\Debug\netcoreapp2.1\Gymme.Repositories.pdb
 C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.csproj.CopyComplete
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Domain\bin\Debug\netcoreapp2.1\Gymme.Domain.deps.json
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Domain\bin\Debug\netcoreapp2.1\Gymme.Domain.dll
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Domain\bin\Debug\netcoreapp2.1\Gymme.Domain.pdb
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Domain\bin\Debug\netcoreapp2.1\Gymme.Repositories.dll
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Domain\bin\Debug\netcoreapp2.1\Gymme.Repositories.pdb
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.csprojAssemblyReference.cache
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.AssemblyInfoInputs.cache
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.AssemblyInfo.cs
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.csproj.CopyComplete
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.dll
+C:\Users\134001\Source\Repos\Luizahf\GymMe\API\Gymme.Domain\obj\Debug\netcoreapp2.1\Gymme.Domain.pdb
