@@ -37,6 +37,8 @@ namespace Gymme.Repositories.EntityFramework
             {
                 entity.ToTable("worksheet_exercise");
                 entity.HasKey(e => e.Id);
+                entity.Property(s => s.ExerciseId).HasColumnName("id_exercise");
+                entity.Property(s => s.WorksheetId).HasColumnName("id_worksheet");
             });
         }
     }
