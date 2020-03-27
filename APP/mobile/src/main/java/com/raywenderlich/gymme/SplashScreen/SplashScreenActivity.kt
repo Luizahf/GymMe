@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import com.raywenderlich.gymme.MyWorksheet.MyWorksheetActivity
 import com.raywenderlich.gymme.R
+import com.raywenderlich.gymme.StartExercisesActivity
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreenActivity : AppCompatActivity(), View.OnClickListener {
@@ -16,6 +17,7 @@ class SplashScreenActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_splash_screen)
 
         btn_worksheet.setOnClickListener(this)
+        btn_new_workout.setOnClickListener(this)
     }
 
     override fun onClick(view: View) {
@@ -24,6 +26,9 @@ class SplashScreenActivity : AppCompatActivity(), View.OnClickListener {
         when (id) {
             R.id.btn_worksheet -> {
                 goToWorksheetExercises()
+            }
+            R.id.btn_new_workout -> {
+                startActivity(Intent(this, StartExercisesActivity::class.java))
             }
         }
     }
