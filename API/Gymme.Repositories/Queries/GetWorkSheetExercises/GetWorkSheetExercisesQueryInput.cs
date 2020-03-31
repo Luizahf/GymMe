@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Gymme.Repositories.Queries.GetWorkSheetExercises
 {
-    public class GetWorkSheetExercisesQueryInput : IQueryInput<List<string>>
+    public class GetWorkSheetExercisesQueryInput : IQueryInput<List<ExerciseEntity>>
     {
         public int WorksheetId { get; set; }
 

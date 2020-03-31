@@ -6,10 +6,10 @@ namespace Gymme.Repositories.Entities
 {
     public class MetricsEntity : EntityBase
     {
-        public int Series { get; set; }
-        public int Repetitions { get; set; }
-        public int Load { get; set; }
-        public int ExecutionTime { get; set; }
+        public int? Series { get; set; }
+        public int? Repetitions { get; set; }
+        public int? Load { get; set; }
+        public int? ExecutionTime { get; set; }
 
         internal override IEnumerable<string> CheckIntegrity()
         {

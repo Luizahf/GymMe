@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Gymme.Repositories.Queries.GetWorkSheetExercises
 {
-    internal class GetWorkSheetExercisesQuery : IQueryHandler<GetWorkSheetExercisesQueryInput, List<string>>
+    internal class GetWorkSheetExercisesQuery : IQueryHandler<GetWorkSheetExercisesQueryInput, List<ExerciseEntity>>
     {
-        public async Task<List<string>> Execute(GetWorkSheetExercisesQueryInput input)
+        public async Task<List<ExerciseEntity>> Execute(GetWorkSheetExercisesQueryInput input)
         {
             using (var context = new GymMeContext())
             {
@@ -20,7 +20,6 @@ namespace Gymme.Repositories.Queries.GetWorkSheetExercises
 
                 return context.ExerciseEntity
                               .Where(s => exercisesIds.Contains(s.Id))
-                              .Select(s => s.Description)
                               .ToList();
             }
 

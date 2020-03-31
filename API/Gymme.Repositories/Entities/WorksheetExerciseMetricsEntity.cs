@@ -1,16 +1,15 @@
 ﻿using Gymme.Repositories.Base;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Gymme.Repositories.Entities
 {
-    public class PracticeEntity : EntityBase
+    public class WorksheetExerciseMetricsEntity : EntityBase
     {
-        public string Description { get; set; }
-        public string Goal { get; set; }
-        public DateTime? DueDate { get; set; }
-        public int? Frequency { get; set; }
-        public int UserId { get; set; }
+        public int WorksheetExerciseId { get; set; }
+
+        public int MetricsId { get; set; }
 
         internal override IEnumerable<string> CheckIntegrity()
         {

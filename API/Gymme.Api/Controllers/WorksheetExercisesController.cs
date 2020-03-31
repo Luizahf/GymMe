@@ -25,7 +25,7 @@ namespace Gymme.Api.Controllers
         }
 
         [HttpGet("{worksheetId}/exercises")]
-        public async Task<ActionResult<List<string>>> GetWorkSheetExercises(int worksheetId)
+        public async Task<ActionResult<List<ExerciseEntity>>> GetWorkSheetExercises(int worksheetId)
         {
             var query = new GetWorkSheetExercisesQueryInput(worksheetId);
             var result = await DataProvider.Query(query);
