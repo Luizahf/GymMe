@@ -27,7 +27,7 @@ class WorksheetAdapter (private val context: Context,
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         holder.let {
-            it.bindView(position, worksheetExerciseViewId, exerciseDescriptionId)
+            it.bindView(worksheetExerciseViewId, exerciseDescriptionId)
         }
     }
 
@@ -36,7 +36,7 @@ class WorksheetAdapter (private val context: Context,
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bindView(position: Int, WorksheetExerciseViewId: Int, exerciseDescriptionId: Int) {
+        fun bindView(WorksheetExerciseViewId: Int, exerciseDescriptionId: Int) {
 
             // Creating the exercise list
             val exerciseList = itemView.exercises
