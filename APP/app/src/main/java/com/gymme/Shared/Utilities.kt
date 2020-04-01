@@ -1,4 +1,4 @@
-package com.raywenderlich.gymme.Shared
+package com.gymme.Shared
 
 import android.app.Activity
 import android.app.AlertDialog

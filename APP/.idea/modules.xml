@@ -3,14 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/APP.iml" filepath="$PROJECT_DIR$/APP.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mobile/APP-mobile.iml" filepath="$PROJECT_DIR$/mobile/APP-mobile.iml" />
-      <module fileurl="file://$PROJECT_DIR$/wear/APP-wear.iml" filepath="$PROJECT_DIR$/wear/APP-wear.iml" />
-      <module fileurl="file://$PROJECT_DIR$/GymMe.iml" filepath="$PROJECT_DIR$/GymMe.iml" />
-      <module fileurl="file://$PROJECT_DIR$/GymMe-APP.iml" filepath="$PROJECT_DIR$/GymMe-APP.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mobile/GymMe-APP-mobile.iml" filepath="$PROJECT_DIR$/mobile/GymMe-APP-mobile.iml" />
-      <module fileurl="file://$PROJECT_DIR$/wear/GymMe-APP-wear.iml" filepath="$PROJECT_DIR$/wear/GymMe-APP-wear.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mobile/mobile.iml" filepath="$PROJECT_DIR$/mobile/mobile.iml" />
-      <module fileurl="file://$PROJECT_DIR$/wear/wear.iml" filepath="$PROJECT_DIR$/wear/wear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
 </project>
