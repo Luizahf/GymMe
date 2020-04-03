@@ -2,7 +2,7 @@ package com.gymme.data.repositories
 
 import com.gymme.data.api.GymMeApi
 import com.gymme.data.dao.WorksheetExercisesDao
-import com.gymme.data.data.GetWorksheetExercisesResponse
+import com.gymme.data.data.Base.ExerciseEntity
 import com.gymme.data.data.LocalExercise
 import com.gymme.domain.entities.Exercise
 import com.gymme.domain.repositories.IWorksheetExercisesRepository
@@ -15,10 +15,10 @@ class WorksheetExercisesRepository (
 
     override suspend fun getWorksheetExercises(worksheetId: Int): List<Exercise> {
         try {
-            val response: GetWorksheetExercisesResponse? =
+            val response: List<ExerciseEntity>? =
                     api.getWorksheetExercises(worksheetId).execute().body()
 
-            return response?.worksheetExercises?.map { Exercise(
+            return response?.map { Exercise(
                     description = it.description,
                     id = it.id!!
             )} ?: listOf()

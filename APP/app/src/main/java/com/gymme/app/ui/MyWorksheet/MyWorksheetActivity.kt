@@ -2,12 +2,16 @@ package com.gymme.app.ui.MyWorksheet
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gymme.R
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MyWorksheetActivity : AppCompatActivity(), View.OnClickListener {
+    private val myWorksheetViewModel: MyWorksheetViewModel by viewModel()
     private lateinit var worksheetsRecyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,9 +20,10 @@ class MyWorksheetActivity : AppCompatActivity(), View.OnClickListener {
 
         worksheetsRecyclerView = findViewById(R.id.worksheets)
         worksheetsRecyclerView.layoutManager = LinearLayoutManager(this)
+
+
+
         worksheetsRecyclerView.adapter = WorksheetAdapter(this, R.layout.worksheet_exercise_layout, R.id.exercise_description, this::clickListnerWorksheet)
-
-
 
     }
 

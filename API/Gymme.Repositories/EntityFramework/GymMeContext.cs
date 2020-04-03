@@ -34,6 +34,14 @@ namespace Gymme.Repositories.EntityFramework
                 entity.HasKey(e => e.Id);
             });
 
+            modelBuilder.Entity<WorksheetEntity>(entity =>
+            {
+                entity.ToTable("worksheet");
+                entity.HasKey(e => e.Id);
+                entity.Property(s => s.Description).HasColumnName("description");
+                entity.Property(s => s.PracticeId).HasColumnName("id_practice");
+            });
+
             modelBuilder.Entity<WorksheetExerciseEntity>(entity =>
             {
                 entity.ToTable("worksheet_exercise");

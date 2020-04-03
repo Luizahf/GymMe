@@ -8,6 +8,7 @@ namespace Gymme.Repositories.Entities
     public class WorksheetEntity : EntityBase
     {
         public string Description { get; set; }
+        public int PracticeId { get; set; }
 
         internal override IEnumerable<string> CheckIntegrity()
         {

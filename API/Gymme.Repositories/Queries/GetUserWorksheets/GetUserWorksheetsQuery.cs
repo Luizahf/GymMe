@@ -7,16 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gymme.Repositories.Queries.GetUserPractices
+namespace Gymme.Repositories.Queries.GetUserWorksheets
 {
-    class GetUserWorksheetsQuery : IQueryHandler<GetUserPracticesQueryInput, List<PracticeEntity>>
+    class GetUserWorksheetsQuery : IQueryHandler<GetUserWorksheetsQueryInput, List<WorksheetEntity>>
     {
-        public async Task<List<PracticeEntity>> Execute(GetUserPracticesQueryInput input)
+        public async Task<List<WorksheetEntity>> Execute(GetUserWorksheetsQueryInput input)
         {
             using (var context = new GymMeContext())
             {
-                return context.PracticeEntity
-                              .Where(s => s.UserId == input.UserId)
+                return context.WorksheetEntity
+                              .Where(s => s.PracticeId == input.PracticeId)
                               .ToList();
             }
         }
