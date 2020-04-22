@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2E2E2E"
     tools:context=".app.ui.SplashScreen.SplashScreenActivity">
 
     <TextView
@@ -84,8 +85,6 @@
         app:layout_constraintGuide_percent="0.16" />
 
     <androidx.constraintlayout.widget.Guideline
-
-
 
 
         android:id="@+id/guideline4"

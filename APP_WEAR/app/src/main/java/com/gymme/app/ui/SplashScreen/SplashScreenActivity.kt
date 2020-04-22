@@ -16,8 +16,6 @@ class SplashScreenActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
-
-        btn_worksheet.setOnClickListener(this)
         btn_new_workout.setOnClickListener(this)
     }
 
@@ -25,9 +23,6 @@ class SplashScreenActivity : AppCompatActivity(), View.OnClickListener {
         val id = view.id
 
         when (id) {
-            R.id.btn_worksheet -> {
-                startActivity(Intent(this, MyWorksheetActivity::class.java))
-            }
             R.id.btn_new_workout -> {
                 startActivity(Intent(this, StartExercisesActivity::class.java))
             }

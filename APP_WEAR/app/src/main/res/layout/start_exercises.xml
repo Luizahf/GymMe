@@ -6,14 +6,76 @@
     android:layout_height="match_parent"
     android:background="@drawable/grey_gradient_background">
 
-    <Spinner
-        android:id="@+id/spinner_worksheets"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/repetitions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:text="15"
+        android:textColor="@color/light_grey"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/exercise_description" />
+
+    <TextView
+        android:id="@+id/load2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="30s"
+        android:textColor="@color/light_grey"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_finish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/exercise_description"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center_vertical"
+        android:text="Mesa Flexora"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="80 Kg"
+        android:textColor="@color/light_grey"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/exercise_description" />
+
+    <TextView
+        android:id="@+id/series"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="3 x"
+        android:textColor="@color/light_grey"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/repetitions"
+        app:layout_constraintTop_toBottomOf="@+id/exercise_description" />
 
     <Button
         android:id="@+id/btn_right"
@@ -42,98 +104,15 @@
     <Button
         android:id="@+id/btn_finish"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:background="@drawable/round_green_border"
-        android:paddingStart="50px"
-        android:paddingEnd="50px"
-        android:text="CONCLUIR treino"
+        android:paddingStart="40px"
+        android:paddingEnd="40px"
+        android:text="CONCLUIR"
         android:textColor="#5A5A5A"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="360dp"
-        android:layout_height="360dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/green_circle"
-        app:layout_constraintBottom_toTopOf="@+id/btn_finish"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_worksheets">
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.4890511" />
-
-        <TextView
-            android:id="@+id/repetitions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="15"
-            android:textColor="@color/light_grey"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toTopOf="@+id/load2"
-            app:layout_constraintEnd_toStartOf="@+id/guideline5" />
-
-        <TextView
-            android:id="@+id/load2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="30s"
-            android:textColor="@color/light_grey"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/exercise_description"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="16dp"
-            android:gravity="center_vertical"
-            android:text="Mesa Flexora"
-            android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="45sp"
-            app:layout_constraintBottom_toTopOf="@+id/repetitions"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/load"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:text="80 Kg"
-            android:textColor="@color/light_grey"
-            android:textSize="36sp"
-            app:layout_constraintStart_toStartOf="@+id/guideline5"
-            app:layout_constraintTop_toTopOf="@+id/repetitions" />
-
-        <TextView
-            android:id="@+id/series"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:text="3 x"
-            android:textColor="@color/light_grey"
-            android:textSize="36sp"
-            app:layout_constraintEnd_toStartOf="@+id/repetitions"
-            app:layout_constraintTop_toTopOf="@+id/repetitions" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

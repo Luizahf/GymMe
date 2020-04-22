@@ -1,11 +1,14 @@
 package com.gymme.app.ui.StartExercises
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.gymme.R
+import com.gymme.app.ui.SplashScreen.SplashScreenActivity
 import com.gymme.domain.entities.Exercise
 import kotlinx.android.synthetic.main.start_exercises.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -36,6 +39,8 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
             }
         })
 
+        var spinnerWorksheetsAdapter : ArrayAdapter<String> = ArrayAdapter<String>(this, R.layout.start_exercises, R.id.spinner_worksheets)
+
         startExercisesViewModel.getWorksheetExercises(1)
     }
 
@@ -59,6 +64,9 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
                     exercise--
                     setDisplay()
                 }
+            }
+            R.id.btn_finish -> {
+                startActivity(Intent(this, SplashScreenActivity::class.java))
             }
         }
     }
