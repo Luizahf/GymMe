@@ -79,27 +79,26 @@
 
     <Button
         android:id="@+id/btn_right"
-        android:layout_width="60sp"
+        android:layout_width="50sp"
         android:layout_height="0dp"
-        android:layout_marginBottom="100dp"
         android:background="@android:color/transparent"
         android:textColor="@color/grey"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_finish"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_left"
-        android:layout_width="60sp"
+        android:layout_width="50sp"
         android:layout_height="0dp"
-        android:layout_marginBottom="100dp"
         android:background="@android:color/transparent"
         android:textColor="@color/grey"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_finish"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btn_finish"

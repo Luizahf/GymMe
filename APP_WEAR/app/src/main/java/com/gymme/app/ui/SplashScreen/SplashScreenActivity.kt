@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.gymme.R
-import com.gymme.app.ui.MyWorksheet.MyWorksheetActivity
 import com.gymme.app.ui.StartExercises.StartExercisesActivity
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 import org.koin.androidx.viewmodel.ext.android.viewModel

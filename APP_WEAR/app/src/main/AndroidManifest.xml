@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gymme">
-
-    <!--Internet Permission-->
+    <!-- Internet Permission -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -12,10 +11,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name="com.gymme.app.ui.StartExercises.StartExercisesActivity" />
-        <activity android:name="com.gymme.app.ui.MyWorksheet.WorksheetAdapter" />
-        <activity android:name="com.gymme.app.ui.MyWorksheet.MyWorksheetActivity" />
-        <activity android:name="com.gymme.app.ui.SplashScreen.SplashScreenActivity">
+        <activity
+            android:name=".app.ui.ChoosePractice.ChoosePracticeActivity"
+            android:label="@string/title_activity_choose_practice"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar"></activity>
+        <activity android:name=".app.ui.StartExercises.StartExercisesActivity" />
+        <activity android:name=".app.ui.MyWorksheet.WorksheetAdapter" />
+        <activity android:name=".app.ui.MyWorksheet.MyWorksheetActivity" />
+        <activity android:name=".app.ui.SplashScreen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
