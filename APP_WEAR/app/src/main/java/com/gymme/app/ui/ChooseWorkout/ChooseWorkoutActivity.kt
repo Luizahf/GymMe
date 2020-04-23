@@ -1,15 +1,13 @@
-package com.gymme.app.ui.ChoosePractice
+package com.gymme.app.ui.ChooseWorkout
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import com.gymme.R
 import com.gymme.app.ui.StartExercises.StartExercisesActivity
 
 import kotlinx.android.synthetic.main.activity_choose_practice.*
-import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class ChooseWorkoutActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -26,6 +24,7 @@ class ChooseWorkoutActivity : AppCompatActivity(), View.OnClickListener {
         when (id) {
             R.id.btn_next -> {
                 startActivity(Intent(this, StartExercisesActivity::class.java))
+                finish()
             }
         }
     }

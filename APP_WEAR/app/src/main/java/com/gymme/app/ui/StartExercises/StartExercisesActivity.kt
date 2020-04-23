@@ -24,6 +24,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
 
         btn_right.setOnClickListener(this)
         btn_left.setOnClickListener(this)
+        btn_finish.setOnClickListener(this)
 
         startExercisesViewModel.worksheetExercisesList.observe(this, Observer {
             it?.let {
