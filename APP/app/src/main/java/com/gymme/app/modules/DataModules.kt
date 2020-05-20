@@ -4,7 +4,10 @@ import androidx.room.Room
 import com.gymme.data.api.GymMeApi
 import com.gymme.data.api.base.RetrofitConfig
 import com.gymme.data.dao.AppDatabase
+import com.gymme.data.repositories.UserRepository
 import com.gymme.data.repositories.WorksheetExercisesRepository
+import com.gymme.domain.entities.User
+import com.gymme.domain.repositories.IUserRepository
 import com.gymme.domain.repositories.IWorksheetExercisesRepository
 import org.koin.dsl.bind
 import org.koin.dsl.module
@@ -27,4 +30,5 @@ internal val DataModules = module {
     }
 
     factory { WorksheetExercisesRepository(get(), get()) } bind IWorksheetExercisesRepository::class
+    factory { UserRepository(get(), get()) } bind IUserRepository::class
 }

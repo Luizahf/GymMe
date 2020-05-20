@@ -2,6 +2,7 @@ package com.gymme.data.api
 
 import com.gymme.data.data.Base.ExerciseEntity
 import com.gymme.data.data.Base.MetricsEntity
+import com.gymme.data.data.Base.UserEntity
 import com.gymme.domain.entities.Exercise
 import retrofit2.Call
 import retrofit2.http.GET
@@ -14,4 +15,7 @@ interface GymMeApi {
 
     @GET("metrics/{worksheetId}/exercise/{exerciseId}")
     fun getMetrics(@Path("worksheetId") worksheetId: Int, exerciseId: Int): Call<MetricsEntity>?
+
+    @GET("users/{userId}")
+    fun getUser(@Path("userId") userId: Int) : Call<UserEntity>?
 }
