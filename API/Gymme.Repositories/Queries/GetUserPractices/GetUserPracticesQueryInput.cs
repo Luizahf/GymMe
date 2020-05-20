@@ -1,8 +1,6 @@
 ﻿using Gymme.Repositories.Abstractions.Query;
 using Gymme.Repositories.Entities;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Gymme.Repositories.Queries.GetUserPractices
 {

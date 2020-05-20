@@ -1,11 +1,9 @@
 ﻿using Gymme.Repositories.Abstractions.Query;
-using Gymme.Repositories.Entities;
 using Gymme.Repositories.EntityFramework;
-using System;
+using Gymme.Repositories.Entities;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace Gymme.Repositories.Queries.GetUserPractices
 {

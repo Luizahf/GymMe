@@ -6,6 +6,7 @@ using Gymme.Domain.Commands.Ping;
 using Gymme.Domain.Commands.Users;
 using Gymme.Repositories.Abstractions;
 using Gymme.Repositories.Entities;
+using Gymme.Repositories.Queries.GetUser;
 using Gymme.Repositories.Queries.GetWorkSheetExercises;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -19,25 +20,17 @@ namespace Gymme.Api.Controllers
         private IDataProvider DataProvider { get; }
         private IMediator Mediator { get; }
 
-        public UsersController(IDataProvider dataProvider, 
+        public UsersController(IDataProvider dataProvider,
                                 IMediator mediator)
         {
             DataProvider = dataProvider;
             Mediator = mediator;
         }
-
-        // GET api/values
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<ExerciseEntity>>> Get(PingCommand comando)
-        //{
-        //    var result = await Mediator.Send(comando);
-        //    return Ok(result);
-        //}
-        
-        [HttpGet()]
-        public async Task<ActionResult<UserEntity>> Get(ExerciseCommand comando)
+        [HttpGet("{userId}")]
+        public async Task<ActionResult<UserEntity>> GetUser(int userId)
         {
-            var result = await Mediator.Send(comando);
+            var query = new GetUserQueryInput(userId);
+            var result = await DataProvider.Query(query);
             return Ok(result);
         }
 
