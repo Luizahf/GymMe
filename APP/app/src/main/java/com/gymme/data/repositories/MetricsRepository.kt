@@ -15,7 +15,7 @@ class MetricsRepository (
     override suspend fun getMetrics(worksheetId: Int, exerciseId: Int): Metrics {
         try {
             val response: MetricsEntity? =
-                    api.getMetrics(worksheetId, exerciseId).execute().body()
+                    api.getMetrics(worksheetId, exerciseId)!!.execute().body()
             if (response != null)
             {
                 return Metrics(
