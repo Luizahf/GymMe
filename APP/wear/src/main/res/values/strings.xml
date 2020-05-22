@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GymMe</string>
+    <string name="valorCarga">40 Kg</string>
+    <string name="valorSeries">3 x </string>
+    <string name="valorRepeticoes">15</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="title_activity_choose_practice">ChoosePracticeActivity</string>
+</resources>
