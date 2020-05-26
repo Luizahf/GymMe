@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Api\\Gymme.Api.csproj": {}
+    "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Api\\Gymme.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Api\\Gymme.Api.csproj": {
+    "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Api\\Gymme.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Api\\Gymme.Api.csproj",
+        "projectUniqueName": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Api\\Gymme.Api.csproj",
         "projectName": "Gymme.Api",
-        "projectPath": "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Api\\Gymme.Api.csproj",
+        "projectPath": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Api\\Gymme.Api.csproj",
         "packagesPath": "C:\\Users\\134001\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Api\\obj\\",
+        "outputPath": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\134001\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Domain\\Gymme.Domain.csproj": {
-                "projectPath": "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Domain\\Gymme.Domain.csproj"
+              "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Domain\\Gymme.Domain.csproj": {
+                "projectPath": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Domain\\Gymme.Domain.csproj"
               },
-              "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj": {
-                "projectPath": "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj"
+              "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj": {
+                "projectPath": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj"
               }
             }
           }
@@ -75,6 +75,10 @@
               "target": "Package",
               "version": "[1.4.10, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.9, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.2.1, )"
@@ -94,14 +98,14 @@
         }
       }
     },
-    "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Domain\\Gymme.Domain.csproj": {
+    "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Domain\\Gymme.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Domain\\Gymme.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Domain\\Gymme.Domain.csproj",
         "projectName": "Gymme.Domain",
-        "projectPath": "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Domain\\Gymme.Domain.csproj",
+        "projectPath": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Domain\\Gymme.Domain.csproj",
         "packagesPath": "C:\\Users\\134001\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Domain\\obj\\",
+        "outputPath": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\134001\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -118,8 +122,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj": {
-                "projectPath": "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj"
+              "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj": {
+                "projectPath": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj"
               }
             }
           }
@@ -166,14 +170,14 @@
         }
       }
     },
-    "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj": {
+    "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj",
         "projectName": "Gymme.Repositories",
-        "projectPath": "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj",
+        "projectPath": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj",
         "packagesPath": "C:\\Users\\134001\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\134001\\Source\\Repos\\Luizahf\\GymMe\\API\\Gymme.Repositories\\obj\\",
+        "outputPath": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\134001\\AppData\\Roaming\\NuGet\\NuGet.Config",

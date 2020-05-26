@@ -12,7 +12,8 @@ class LoginViewModel(application: Application,
 
     fun getUser(login: String, password: String) {
         doAsyncWork {
-            //user = userHandler.execute(login, password)
+            val result = userHandler.execute(login, password)
+            user.value = result
         }
     }
 }

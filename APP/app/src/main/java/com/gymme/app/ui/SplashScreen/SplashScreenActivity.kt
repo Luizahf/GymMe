@@ -30,15 +30,6 @@ class SplashScreenActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, MyWorksheetActivity::class.java))
             }
             R.id.btn_new_workout -> {
-                var inflater = layoutInflater
-                val loginDialog = inflater.inflate(R.layout.activity_login, null)
-                val builder = AlertDialog.Builder(this)
-                builder.setView(loginDialog)
-                val dialog = builder.create()
-                dialog.setCancelable(false)
-                dialog.setCanceledOnTouchOutside(true)
-                dialog.show()
-
                 startActivity(Intent(this, LoginActivity::class.java))
             }
         }

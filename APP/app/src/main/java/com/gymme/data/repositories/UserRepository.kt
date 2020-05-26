@@ -11,10 +11,10 @@ class UserRepository (
         private val dao: UserDao,
         private val api: GymMeApi
 ) : IUserRepository {
-    override suspend fun getUser(userId: Int): User {
+    override suspend fun getUser(login: String, password :String): User {
         try {
             val response: UserEntity? =
-                    api.getUser(userId)!!.execute().body()
+                    api.getUser(login, password)!!.execute().body()
             if (response != null)
             {
                 return User(

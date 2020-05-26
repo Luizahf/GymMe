@@ -15,6 +15,6 @@ interface GymMeApi {
     @GET("metrics/{worksheetId}/exercise/{exerciseId}")
     fun getMetrics(@Path("worksheetId") worksheetId: Int, exerciseId: Int): Call<MetricsEntity>?
 
-    @GET("users/{userId}")
-    fun getUser(@Path("userId") userId: Int) : Call<UserEntity>?
+    @GET("users/{login}/{password}")
+    fun getUser(@Path("login") login: String, password: String) : Call<UserEntity>?
 }

@@ -1,9 +1,9 @@
-﻿using System.Threading.Tasks;
-using Gymme.Repositories.Abstractions;
+﻿using Gymme.Repositories.Abstractions;
 using Gymme.Repositories.Entities;
-using Gymme.Repositories.Queries.GetUser;
-using MediatR;
+using Gymme.Domain.Commands.User;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using MediatR;
 
 namespace Gymme.Api.Controllers
 {
@@ -20,11 +20,10 @@ namespace Gymme.Api.Controllers
             DataProvider = dataProvider;
             Mediator = mediator;
         }
-        [HttpGet("{userId}")]
-        public async Task<ActionResult<UserEntity>> GetUser(int userId)
+        [HttpGet("{login}/{password}")]
+        public async Task<ActionResult<UserEntity>> GetUser(string login, string password)
         {
-            var query = new GetUserQueryInput(userId);
-            var result = await DataProvider.Query(query);
+            var result = Mediator.Send(new UserCommand(login, password));
             return Ok(result);
         }
     }

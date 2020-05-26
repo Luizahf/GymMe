@@ -4,5 +4,5 @@ import domain.entities.User
 
 
 interface IUserRepository {
-    suspend fun getUser(userId: Int) : User
+    suspend fun getUser(login: String, password :String) : User
 }
