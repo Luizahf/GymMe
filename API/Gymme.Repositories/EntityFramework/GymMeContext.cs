@@ -6,6 +6,7 @@ namespace Gymme.Repositories.EntityFramework
     internal class GymMeContext : DbContext
     {
         public DbSet<UserEntity> UserEntity { get; set; }
+        public DbSet<LoginEntity> LoginEntity { get; set; }
         public DbSet<MetricsEntity> MetricsEntity { get; set; }
         public DbSet<ExerciseEntity> ExerciseEntity { get; set; }
         public DbSet<PracticeEntity> PracticeEntity { get; set; }
@@ -32,6 +33,15 @@ namespace Gymme.Repositories.EntityFramework
             {
                 entity.ToTable("users");
                 entity.HasKey(e => e.Id);
+            });
+
+            modelBuilder.Entity<LoginEntity>(entity =>
+            {
+                entity.ToTable("login");
+                entity.HasKey(e => e.Id);
+                entity.Property(s => s.IdUser).HasColumnName("id_user");
+                entity.Property(s => s.Login).HasColumnName("login_name");
+                entity.Property(s => s.Password).HasColumnName("password");
             });
 
             modelBuilder.Entity<WorksheetEntity>(entity =>

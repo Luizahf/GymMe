@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Gymme.Domain.Commands.Ping;
-using Gymme.Domain.Commands.Users;
+﻿using System.Threading.Tasks;
 using Gymme.Repositories.Abstractions;
 using Gymme.Repositories.Entities;
 using Gymme.Repositories.Queries.GetUser;
-using Gymme.Repositories.Queries.GetWorkSheetExercises;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -33,23 +27,6 @@ namespace Gymme.Api.Controllers
             var result = await DataProvider.Query(query);
             return Ok(result);
         }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }
+ 

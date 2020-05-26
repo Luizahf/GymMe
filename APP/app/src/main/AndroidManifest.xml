@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gymme">
 
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
-    <!-- Internet Permission -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Internet Permission -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,6 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".app.ui.Login.LoginActivity"></activity>
         <activity android:name=".app.ui.StartExercises.StartExercisesActivity" />
         <activity android:name=".app.ui.MyWorksheet.WorksheetAdapter" />
         <activity android:name=".app.ui.MyWorksheet.MyWorksheetActivity" />

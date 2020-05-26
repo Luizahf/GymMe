@@ -3,12 +3,13 @@ package com.gymme.app.ui.SplashScreen
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.gymme.R
+import com.gymme.app.ui.Login.LoginActivity
 import com.gymme.app.ui.MyWorksheet.MyWorksheetActivity
 import com.gymme.app.ui.StartExercises.StartExercisesActivity
 import kotlinx.android.synthetic.main.activity_splash_screen.*
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class SplashScreenActivity : AppCompatActivity(), View.OnClickListener {
@@ -29,7 +30,16 @@ class SplashScreenActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, MyWorksheetActivity::class.java))
             }
             R.id.btn_new_workout -> {
-                startActivity(Intent(this, StartExercisesActivity::class.java))
+                var inflater = layoutInflater
+                val loginDialog = inflater.inflate(R.layout.activity_login, null)
+                val builder = AlertDialog.Builder(this)
+                builder.setView(loginDialog)
+                val dialog = builder.create()
+                dialog.setCancelable(false)
+                dialog.setCanceledOnTouchOutside(true)
+                dialog.show()
+
+                startActivity(Intent(this, LoginActivity::class.java))
             }
         }
     }
