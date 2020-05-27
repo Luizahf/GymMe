@@ -11,6 +11,7 @@ import com.gymme.R
 import com.gymme.Shared.Constants
 import com.gymme.app.ui.SplashScreen.SplashScreenActivity
 import com.gymme.domain.entities.Exercise
+import com.gymme.domain.entities.Practice
 import kotlinx.android.synthetic.main.start_exercises.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -18,6 +19,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
     private val startExercisesViewModel: StartExercisesViewModel by viewModel()
     var exerciseList: List<Exercise> = mutableListOf()
     private var exercise: Int = 0
+    var practiceList : List<Practice> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +42,20 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
             }
         })
 
+        startExercisesViewModel.practiceList.observe(this, Observer {
+            it?.let {
+                practices ->
+                run {
+                    if (practices.isNotEmpty()) {
+                        practiceList = practices
+                        setDisplay()
+                    } else {
+                        Toast.makeText(this, "Não foi possível encontrar os treinos do usuário.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        })
+
         var spinnerWorksheetsAdapter : ArrayAdapter<String> = ArrayAdapter<String>(this, R.layout.start_exercises, R.id.spinner_worksheets)
 
         setInitialLayoutInfo()
@@ -49,6 +65,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
 
         val userId = intent.getStringExtra(Constants.USER_ID).toInt()
         // Get Practices
+        startExercisesViewModel.getPractices(userId)
         //val practices =
         // Get PracticeWorksheets
         // Put values in the spinners
