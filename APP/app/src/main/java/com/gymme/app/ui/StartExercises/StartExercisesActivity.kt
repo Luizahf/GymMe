@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.gymme.R
+import com.gymme.Shared.Constants
 import com.gymme.app.ui.SplashScreen.SplashScreenActivity
 import com.gymme.domain.entities.Exercise
 import kotlinx.android.synthetic.main.start_exercises.*
@@ -46,8 +47,9 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
 
     fun setInitialLayoutInfo() {
 
-        val userId = intent.getStringExtra("message").toInt()
+        val userId = intent.getStringExtra(Constants.USER_ID).toInt()
         // Get Practices
+        //val practices =
         // Get PracticeWorksheets
         // Put values in the spinners
         // getWorksheetExercises with the worksheetId value from the spinner

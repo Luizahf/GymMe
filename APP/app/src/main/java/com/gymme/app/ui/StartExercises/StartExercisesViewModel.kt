@@ -11,18 +11,17 @@ class StartExercisesViewModel(application: Application,
 
     var worksheetExercisesList = MutableLiveData<List<Exercise>>().apply {value = null}
 
+    fun getPractices(userId: Int) {
+    }
+
+    fun getPracticeWorksheets(practiceId: Int) {
+
+    }
+
     fun getWorksheetExercises(worksheetId: Int) {
         doAsyncWork {
             val resultList = worksheetExercisesHandler.execute(worksheetId)
             worksheetExercisesList.postValue(resultList)
         }
-    }
-
-    fun getPractices(userId: Int) {
-
-    }
-
-    fun getPracticeWorksheets(practiceId: Int) {
-
     }
 }

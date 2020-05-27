@@ -20,7 +20,7 @@ interface GymMeApi {
                 @Path("password") password: String) : Call<UserEntity>?
 
     @GET("practice/{userId}")
-    fun getPractice(@Path("userId") userId: Int) : Call<PracticeEntity>?
+    fun getPractice(@Path("userId") userId: Int) : Call<List<PracticeEntity>>?
 
     @GET("practiceWorksheets/{practiceId}/worksheets")
     fun getPracticeWorksheets(@Path("practiceId") practiceId: Int) : Call<List<WorksheetEntity>>?
