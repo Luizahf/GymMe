@@ -17,4 +17,12 @@ class StartExercisesViewModel(application: Application,
             worksheetExercisesList.postValue(resultList)
         }
     }
+
+    fun getPractices(userId: Int) {
+
+    }
+
+    fun getPracticeWorksheets(practiceId: Int) {
+
+    }
 }

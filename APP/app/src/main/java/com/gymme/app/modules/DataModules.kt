@@ -27,6 +27,7 @@ internal val DataModules = module {
 
     single {
         get<AppDatabase>().worksheetExercisesDao()
+        get<AppDatabase>().userDao()
     }
 
     factory { WorksheetExercisesRepository(get(), get()) } bind IWorksheetExercisesRepository::class

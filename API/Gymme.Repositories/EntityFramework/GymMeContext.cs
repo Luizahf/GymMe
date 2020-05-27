@@ -37,7 +37,7 @@ namespace Gymme.Repositories.EntityFramework
 
             modelBuilder.Entity<LoginEntity>(entity =>
             {
-                entity.ToTable("login");
+                entity.ToTable("logins");
                 entity.HasKey(e => e.Id);
                 entity.Property(s => s.IdUser).HasColumnName("id_user");
                 entity.Property(s => s.Login).HasColumnName("login_name");

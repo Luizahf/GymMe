@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             it?.let {
                 user ->
                 run {
-                    if (user != null) {
+                    if (user.Id != 0) {
                         val intent = Intent(this, StartExercisesActivity::class.java)
                         intent.putExtra(Constants.USER_ID, user.Id)
                         startActivity(intent)
@@ -43,7 +43,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         when (id) {
             R.id.btn_confirm -> {
-                loginViewModel.getUser(login.toString(), password.toString())
+                loginViewModel.getUser(login.text.toString(), password.text.toString())
             }
             R.id.btn_new_login -> {
                 // Implement new registration page

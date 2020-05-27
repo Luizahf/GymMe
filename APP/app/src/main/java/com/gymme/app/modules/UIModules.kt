@@ -1,5 +1,6 @@
 package com.gymme.app.modules
 
+import com.gymme.app.ui.Login.LoginViewModel
 import com.gymme.app.ui.MyWorksheet.MyWorksheetViewModel
 import com.gymme.app.ui.StartExercises.StartExercisesViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -16,6 +17,13 @@ val UIModules = module {
 
     viewModel {
         MyWorksheetViewModel(
+                get(),
+                get()
+        )
+    }
+
+    viewModel {
+        LoginViewModel(
                 get(),
                 get()
         )

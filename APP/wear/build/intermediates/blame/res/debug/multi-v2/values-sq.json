@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\134001\\source\\repos\\GymMe\\APP\\wear\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sq\\values-sq.xml",
+            "outputFile": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\APP\\wear\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sq\\values-sq.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\134001\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\f70688ea87d3bfe2a3aabbef351136ce\\res\\values-sq\\values-sq.xml",
+                    "source": "C:\\Users\\Luiza\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-11.6.0.aar\\ae87f1a06bae96c4b6705e53842611a1\\res\\values-sq\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "283,388,593,728,833,1053,1185,1326,1555,1661,1867,2003,2231,2441,2532,2625",
+                        "endColumns": "104,204,134,104,219,131,140,228,105,205,135,227,209,90,92,106",
+                        "endOffsets": "387,592,727,832,1052,1184,1325,1554,1660,1866,2002,2230,2440,2531,2624,2731"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32,33,34,35,37,38,39,40,41,42,43,44,45",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2801,2910,3115,3254,3363,3583,3719,4052,4281,4391,4597,4737,4965,5179,5274,5371",
+                        "endColumns": "108,204,138,108,219,135,144,228,109,205,139,227,213,94,96,110",
+                        "endOffsets": "2905,3110,3249,3358,3578,3714,3859,4276,4386,4592,4732,4960,5174,5269,5366,5477"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Luiza\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\87bacf27a4b1133f434ca9ecfa84f24b\\res\\values-sq\\values-sq.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,24 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\134001\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.2.0.aar\\b75240138051898928b50521525511bb\\res\\values-sq\\values-sq.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "47",
-                        "startColumns": "4",
-                        "startOffsets": "5563",
-                        "endColumns": "100",
-                        "endOffsets": "5659"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\134001\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-basement-11.6.0.aar\\36153dd1b4177f671dbdd99a042110e7\\res\\values-sq\\values.xml",
+                    "source": "C:\\Users\\Luiza\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-basement-11.6.0.aar\\65ef4e8f9301aed0812dc1a17d311843\\res\\values-sq\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -55,20 +55,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\134001\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-11.6.0.aar\\f9f5aec4feac7bee29c54fc0c39fecb0\\res\\values-sq\\values.xml",
+                    "source": "C:\\Users\\Luiza\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.2.0.aar\\8b3a500faf1b48ba70190ed48acf4b29\\res\\values-sq\\values-sq.xml",
                     "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "283,388,593,728,833,1053,1185,1326,1555,1661,1867,2003,2231,2441,2532,2625",
-                        "endColumns": "104,204,134,104,219,131,140,228,105,205,135,227,209,90,92,106",
-                        "endOffsets": "387,592,727,832,1052,1184,1325,1554,1660,1866,2002,2230,2440,2531,2624,2731"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "29,30,31,32,33,34,35,37,38,39,40,41,42,43,44,45",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2801,2910,3115,3254,3363,3583,3719,4052,4281,4391,4597,4737,4965,5179,5274,5371",
-                        "endColumns": "108,204,138,108,219,135,144,228,109,205,139,227,213,94,96,110",
-                        "endOffsets": "2905,3110,3249,3358,3578,3714,3859,4276,4386,4592,4732,4960,5174,5269,5366,5477"
+                        "startLines": "47",
+                        "startColumns": "4",
+                        "startOffsets": "5563",
+                        "endColumns": "100",
+                        "endOffsets": "5659"
                     }
                 }
             ]

@@ -23,7 +23,7 @@ namespace Gymme.Api.Controllers
         [HttpGet("{login}/{password}")]
         public async Task<ActionResult<UserEntity>> GetUser(string login, string password)
         {
-            var result = Mediator.Send(new UserCommand(login, password));
+            var result = await Mediator.Send(new UserCommand(login, password));
             return Ok(result);
         }
     }

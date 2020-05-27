@@ -14,6 +14,8 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Callback;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Configuration;
+import data.dao.UserDao;
+import data.dao.UserDao_Impl;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
@@ -25,19 +27,23 @@ import java.util.Set;
 public final class AppDatabase_Impl extends AppDatabase {
   private volatile WorksheetExercisesDao _worksheetExercisesDao;
 
+  private volatile UserDao _userDao;
+
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `worksheet_exercises` (`id` INTEGER NOT NULL, `description` TEXT, PRIMARY KEY(`id`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `users` (`Id` INTEGER NOT NULL, `Name` TEXT NOT NULL, `Height` INTEGER, `Weight` INTEGER, `Gender` INTEGER, PRIMARY KEY(`Id`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c711a5e13e132cec97eecfddcc0015ff')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '91e9fb7d7f3ce9c298961eebefa41d65')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `worksheet_exercises`");
+        _db.execSQL("DROP TABLE IF EXISTS `users`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -88,9 +94,24 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoWorksheetExercises + "\n"
                   + " Found:\n" + _existingWorksheetExercises);
         }
+        final HashMap<String, TableInfo.Column> _columnsUsers = new HashMap<String, TableInfo.Column>(5);
+        _columnsUsers.put("Id", new TableInfo.Column("Id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUsers.put("Name", new TableInfo.Column("Name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUsers.put("Height", new TableInfo.Column("Height", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUsers.put("Weight", new TableInfo.Column("Weight", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUsers.put("Gender", new TableInfo.Column("Gender", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysUsers = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesUsers = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoUsers = new TableInfo("users", _columnsUsers, _foreignKeysUsers, _indicesUsers);
+        final TableInfo _existingUsers = TableInfo.read(_db, "users");
+        if (! _infoUsers.equals(_existingUsers)) {
+          return new RoomOpenHelper.ValidationResult(false, "users(com.gymme.data.data.LocalUser).\n"
+                  + " Expected:\n" + _infoUsers + "\n"
+                  + " Found:\n" + _existingUsers);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "c711a5e13e132cec97eecfddcc0015ff", "5c4bbb36cd90d81bae7ed570d2902119");
+    }, "91e9fb7d7f3ce9c298961eebefa41d65", "7dcbd49ed144b236f927643b472077c8");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -103,7 +124,7 @@ public final class AppDatabase_Impl extends AppDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "worksheet_exercises");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "worksheet_exercises","users");
   }
 
   @Override
@@ -113,6 +134,7 @@ public final class AppDatabase_Impl extends AppDatabase {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `worksheet_exercises`");
+      _db.execSQL("DELETE FROM `users`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -133,6 +155,20 @@ public final class AppDatabase_Impl extends AppDatabase {
           _worksheetExercisesDao = new WorksheetExercisesDao_Impl(this);
         }
         return _worksheetExercisesDao;
+      }
+    }
+  }
+
+  @Override
+  public UserDao userDao() {
+    if (_userDao != null) {
+      return _userDao;
+    } else {
+      synchronized(this) {
+        if(_userDao == null) {
+          _userDao = new UserDao_Impl(this);
+        }
+        return _userDao;
       }
     }
   }

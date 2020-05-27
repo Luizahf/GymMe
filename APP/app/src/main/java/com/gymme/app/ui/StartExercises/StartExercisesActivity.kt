@@ -41,6 +41,17 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
 
         var spinnerWorksheetsAdapter : ArrayAdapter<String> = ArrayAdapter<String>(this, R.layout.start_exercises, R.id.spinner_worksheets)
 
+        setInitialLayoutInfo()
+    }
+
+    fun setInitialLayoutInfo() {
+
+        val userId = intent.getStringExtra("message").toInt()
+        // Get Practices
+        // Get PracticeWorksheets
+        // Put values in the spinners
+        // getWorksheetExercises with the worksheetId value from the spinner
+
         startExercisesViewModel.getWorksheetExercises(1)
     }
 

@@ -13,7 +13,7 @@ class LoginViewModel(application: Application,
     fun getUser(login: String, password: String) {
         doAsyncWork {
             val result = userHandler.execute(login, password)
-            user.value = result
+            user.postValue(result)
         }
     }
 }

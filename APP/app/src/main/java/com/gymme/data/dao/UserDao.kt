@@ -3,7 +3,6 @@ package com.gymme.data.dao
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.gymme.data.data.LocalMetrics
 import com.gymme.data.data.LocalUser
 
 @Dao
