@@ -12,6 +12,7 @@ import com.gymme.Shared.Constants
 import com.gymme.app.ui.SplashScreen.SplashScreenActivity
 import com.gymme.domain.entities.Exercise
 import com.gymme.domain.entities.Practice
+import com.gymme.domain.entities.Worksheet
 import kotlinx.android.synthetic.main.start_exercises.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -20,6 +21,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
     var exerciseList: List<Exercise> = mutableListOf()
     private var exercise: Int = 0
     var practiceList : List<Practice> = mutableListOf()
+    var worksheetList : List<Worksheet> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +29,15 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
 
         btn_right.setOnClickListener(this)
         btn_left.setOnClickListener(this)
+
+        var spinnerWorksheetsAdapter : ArrayAdapter<String> = ArrayAdapter<String>(this, R.layout.start_exercises, R.id.spinner_worksheets)
+        setInitialLayoutInfo()
+    }
+
+    fun setInitialLayoutInfo() {
+
+        val userId = intent.getStringExtra(Constants.USER_ID).toInt()
+        startExercisesViewModel.getPractices(userId)
 
         startExercisesViewModel.worksheetExercisesList.observe(this, Observer {
             it?.let {
@@ -48,7 +59,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
                 run {
                     if (practices.isNotEmpty()) {
                         practiceList = practices
-                        setDisplay()
+                        startExercisesViewModel.getPracticeWorksheets(practices[0].id)
                     } else {
                         Toast.makeText(this, "Não foi possível encontrar os treinos do usuário.", Toast.LENGTH_SHORT).show()
                     }
@@ -56,22 +67,23 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
             }
         })
 
-        var spinnerWorksheetsAdapter : ArrayAdapter<String> = ArrayAdapter<String>(this, R.layout.start_exercises, R.id.spinner_worksheets)
+        startExercisesViewModel.worksheetList.observe(this, Observer {
+            it?.let {
+                worksheets ->
+                run {
+                    if (worksheets.isNotEmpty()) {
+                        worksheetList = worksheets
+                        startExercisesViewModel.getWorksheetExercises(worksheets[0].id)
+                    } else {
+                        Toast.makeText(this, "Não foi possível encontrar os treinos do usuário.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        })
 
-        setInitialLayoutInfo()
-    }
-
-    fun setInitialLayoutInfo() {
-
-        val userId = intent.getStringExtra(Constants.USER_ID).toInt()
-        // Get Practices
-        startExercisesViewModel.getPractices(userId)
-        //val practices =
-        // Get PracticeWorksheets
         // Put values in the spinners
-        // getWorksheetExercises with the worksheetId value from the spinner
 
-        startExercisesViewModel.getWorksheetExercises(1)
+
     }
 
     fun setDisplay() {
