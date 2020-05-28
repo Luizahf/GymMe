@@ -5,6 +5,6 @@ import com.gymme.domain.repositories.IPracticeRepository
 class FullPracticeHandler(private val PracticeRepository: IPracticeRepository) {
     suspend fun execute(userId: Int): List<Practice> {
 
-        return PracticeRepository.getUserPractices(userId)
+        return PracticeRepository.getPractices(userId)
     }
 }

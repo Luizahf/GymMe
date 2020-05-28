@@ -3,7 +3,8 @@ package com.gymme.data.data
 import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.PrimaryKey
-import domain.entities.User
+import com.gymme.domain.entities.Metrics
+import com.gymme.domain.entities.User
 
 @Entity(tableName = "users")
 data class LocalUser(

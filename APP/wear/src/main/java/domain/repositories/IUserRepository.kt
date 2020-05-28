@@ -1,8 +1,7 @@
-package domain.repositories
+package com.gymme.domain.repositories
 
-import domain.entities.User
-
+import com.gymme.domain.entities.User
 
 interface IUserRepository {
-    suspend fun getUser(login: String, password :String) : User
+    suspend fun getUser(login: String, password: String) : User
 }

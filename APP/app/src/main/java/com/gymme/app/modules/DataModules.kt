@@ -8,7 +8,6 @@ import com.gymme.data.repositories.PracticeRepository
 import com.gymme.data.repositories.PracticeWorksheetsRepository
 import com.gymme.data.repositories.UserRepository
 import com.gymme.data.repositories.WorksheetExercisesRepository
-import com.gymme.domain.entities.User
 import com.gymme.domain.repositories.IPracticeRepository
 import com.gymme.domain.repositories.IPracticeWorksheetseRepository
 import com.gymme.domain.repositories.IUserRepository
@@ -29,10 +28,8 @@ internal val DataModules = module {
                 .build()
     }
 
-    single {
-        get<AppDatabase>().worksheetExercisesDao()
-        get<AppDatabase>().userDao()
-    }
+    single { get<AppDatabase>().worksheetExercisesDao() }
+    single { get<AppDatabase>().userDao() }
 
     factory { WorksheetExercisesRepository(get(), get()) } bind IWorksheetExercisesRepository::class
     factory { UserRepository(get(), get()) } bind IUserRepository::class

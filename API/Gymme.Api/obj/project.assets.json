@@ -13702,19 +13702,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\134001\\.nuget\\packages\\": {}
+    "C:\\Users\\Luiza\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Api\\Gymme.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\API\\Gymme.Api\\Gymme.Api.csproj",
       "projectName": "Gymme.Api",
-      "projectPath": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Api\\Gymme.Api.csproj",
-      "packagesPath": "C:\\Users\\134001\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Api\\obj\\",
+      "projectPath": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\API\\Gymme.Api\\Gymme.Api.csproj",
+      "packagesPath": "C:\\Users\\Luiza\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\API\\Gymme.Api\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\134001\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Luiza\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13722,17 +13726,16 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://localiza.pkgs.visualstudio.com/_packaging/LocalizaAtivos%40Local/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Domain\\Gymme.Domain.csproj": {
-              "projectPath": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Domain\\Gymme.Domain.csproj"
+            "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\API\\Gymme.Domain\\Gymme.Domain.csproj": {
+              "projectPath": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\API\\Gymme.Domain\\Gymme.Domain.csproj"
             },
-            "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj": {
-              "projectPath": "C:\\Users\\134001\\source\\repos\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj"
+            "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\API\\Gymme.Repositories\\Gymme.Repositories.csproj": {
+              "projectPath": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\API\\Gymme.Repositories\\Gymme.Repositories.csproj"
             }
           }
         }
@@ -13766,7 +13769,6 @@
             "version": "[1.1.0, )"
           },
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -13785,16 +13787,10 @@
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }

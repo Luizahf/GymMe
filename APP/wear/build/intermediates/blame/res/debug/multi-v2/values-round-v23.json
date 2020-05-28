@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\134001\\source\\repos\\GymMe\\APP\\wear\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-round-v23\\values-round-v23.xml",
+            "outputFile": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\APP\\wear\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-round-v23\\values-round-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\134001\\source\\repos\\GymMe\\APP\\wear\\src\\main\\res\\values-round\\strings.xml",
+                    "source": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\APP\\wear\\src\\main\\res\\values-round\\strings.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

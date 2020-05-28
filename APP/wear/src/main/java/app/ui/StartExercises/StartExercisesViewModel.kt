@@ -6,9 +6,8 @@ import com.gymme.app.ViewModelBase
 import com.gymme.domain.entities.Exercise
 import com.gymme.domain.handlers.WorksheetExercisesHandler
 
-class StartExercisesViewModel(application: Application,
-                              private val worksheetExercisesHandler: WorksheetExercisesHandler) : ViewModelBase(application) {
-
+class StartExercisesViewModel (application: Application,
+                               private val worksheetExercisesHandler: WorksheetExercisesHandler) : ViewModelBase(application) {
     var worksheetExercisesList = MutableLiveData<List<Exercise>>().apply {value = null}
 
     fun getWorksheetExercises(worksheetId: Int) {

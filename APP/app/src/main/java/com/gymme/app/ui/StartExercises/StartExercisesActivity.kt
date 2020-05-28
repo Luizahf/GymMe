@@ -37,8 +37,8 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
 
     fun setInitialLayoutInfo() {
 
-        val userId = intent.getStringExtra(Constants.USER_ID).toInt()
-        startExercisesViewModel.getPractices(userId)
+        val userId = intent.getStringExtra(Constants.USER_ID)
+        startExercisesViewModel.getPractices(userId.toInt())
 
         startExercisesViewModel.worksheetExercisesList.observe(this, Observer {
             it?.let {
@@ -92,8 +92,12 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
         spinnerPractices.adapter = adapter
 
         spinnerPractices.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View, position: Int, id: Long) {
-                startExercisesViewModel.selectPractice(practiceList[position].description)
+            override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View?, position: Int, id: Long) {
+                if (position > 0) {
+                    startExercisesViewModel.selectPractice(practiceList[position].description)
+                } else {
+                    startExercisesViewModel.selectPractice(practiceList[0].description)
+                }
             }
             override fun onNothingSelected(parentView: AdapterView<*>) { }
         }
@@ -101,13 +105,18 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
 
     fun setWorksheetsSpinner(worksheets: List<Worksheet>) {
         val spinnerWorksheets: Spinner = findViewById(R.id.spinner_worksheets)
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, worksheets)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, worksheets.map { wrksht -> wrksht.description })
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerWorksheets.adapter = adapter
 
         spinnerWorksheets.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View, position: Int, id: Long) {
-                startExercisesViewModel.selectPractice(worksheetList[position].description)
+            override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View?, position: Int, id: Long) {
+                if (position > 0) {
+                    startExercisesViewModel.selectWorksheet(worksheetList[position].description)
+                } else {
+                    startExercisesViewModel.selectWorksheet(worksheetList[0].description)
+                }
+
             }
             override fun onNothingSelected(parentView: AdapterView<*>) { }
         }

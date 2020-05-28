@@ -1,8 +1,6 @@
 package com.gymme.data.api
 
-import com.gymme.data.data.Base.ExerciseEntity
-import com.gymme.data.data.Base.MetricsEntity
-import data.data.Base.UserEntity
+import com.gymme.data.data.Base.*
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -13,8 +11,16 @@ interface GymMeApi {
     fun getWorksheetExercises(@Path("worksheetId") worksheetId: Int): Call<List<ExerciseEntity>?>
 
     @GET("metrics/{worksheetId}/exercise/{exerciseId}")
-    fun getMetrics(@Path("worksheetId") worksheetId: Int, exerciseId: Int): Call<MetricsEntity>?
+    fun getMetrics(@Path("worksheetId") worksheetId: Int,
+                   @Path("exerciseId") exerciseId: Int): Call<MetricsEntity>?
 
     @GET("users/{login}/{password}")
-    fun getUser(@Path("login") login: String, password: String) : Call<UserEntity>?
+    fun getUser(@Path("login") login: String,
+                @Path("password") password: String) : Call<UserEntity>?
+
+    @GET("practice/{userId}")
+    fun getPractice(@Path("userId") userId: Int) : Call<List<PracticeEntity>>?
+
+    @GET("practiceWorksheets/{practiceId}/worksheets")
+    fun getPracticeWorksheets(@Path("practiceId") practiceId: Int) : Call<List<WorksheetEntity>>?
 }

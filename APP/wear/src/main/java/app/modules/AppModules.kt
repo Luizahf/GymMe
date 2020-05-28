@@ -4,9 +4,9 @@ import org.koin.core.module.Module
 
 
 object AppModules {
-    fun getModules(): List<Module> = listOf(
-            DataModules,
-            DomainModules,
-            UIModules
-    )
+  fun getModules(): List<Module> = listOf(
+          DataModules,
+          DomainModules,
+          UIModules
+  )
 }

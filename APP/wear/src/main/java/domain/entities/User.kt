@@ -1,4 +1,4 @@
-package domain.entities
+package com.gymme.domain.entities
 import java.io.Serializable
 
 data class User (

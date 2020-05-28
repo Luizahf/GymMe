@@ -1,11 +1,11 @@
-package data.data.Base
+package com.gymme.data.data.Base
 
 import java.io.Serializable
 
 data class UserEntity (
-        var Id: Int,
-        var Name: String,
-        var Height: Int?,
-        var Weight: Int?,
-        var Gender: Char?
+        var id: Int,
+        var name: String,
+        var height: Int?,
+        var weight: Int?,
+        var gender: Char?
 ) : Serializable

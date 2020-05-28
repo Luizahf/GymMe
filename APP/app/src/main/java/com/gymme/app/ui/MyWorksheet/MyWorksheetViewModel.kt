@@ -9,11 +9,11 @@ import com.gymme.data.data.LocalExercise
 class MyWorksheetViewModel internal constructor(
         application: Application,
         private val worksheetExercisesRepository: WorksheetExercisesRepository
-        ) : ViewModelBase(application) {
+) : ViewModelBase(application) {
 
-        fun storeWorksheetWorkouts(worksheetLocalExercises: List<LocalExercise>) {
-                doAsyncWork {
-                        worksheetExercisesRepository.insert(worksheetLocalExercises)
-                }
+    fun storeWorksheetWorkouts(worksheetLocalExercises: List<LocalExercise>) {
+        doAsyncWork {
+            worksheetExercisesRepository.insert(worksheetLocalExercises)
         }
+    }
 }

@@ -1,11 +1,11 @@
-package data.repositories
+package com.gymme.data.repositories
 
 import com.gymme.data.api.GymMeApi
+import com.gymme.data.dao.UserDao
+import com.gymme.data.data.Base.UserEntity
 import com.gymme.data.data.LocalUser
-import data.dao.UserDao
-import data.data.Base.UserEntity
-import domain.entities.User
-import domain.repositories.IUserRepository
+import com.gymme.domain.entities.User
+import com.gymme.domain.repositories.IUserRepository
 
 class UserRepository (
         private val dao: UserDao,
@@ -15,14 +15,14 @@ class UserRepository (
         try {
             val response: UserEntity? =
                     api.getUser(login, password)!!.execute().body()
-            if (response != null)
+            if (response != null && response.id != 0)
             {
                 return User(
-                        Id = response!!.Id,
-                        Name = response!!.Name,
-                        Weight = response!!.Weight,
-                        Height = response!!.Height,
-                        Gender = response!!.Gender
+                        Id = response!!.id,
+                        Name = response!!.name,
+                        Weight = response!!.weight,
+                        Height = response!!.height,
+                        Gender = response!!.gender
 
                 )
             }
@@ -31,7 +31,7 @@ class UserRepository (
             }
         }
         catch(e: Exception) {
-            val message = "Falha ao obter as metricas do exercício."
+            val message = "Falha ao obter usuário."
             throw Exception(message)
         }
     }

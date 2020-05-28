@@ -5,7 +5,6 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.gymme.data.data.LocalExercise
 import com.gymme.data.data.LocalUser
-import data.dao.UserDao
 
 @Database(entities = arrayOf(
         LocalExercise::class,
