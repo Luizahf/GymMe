@@ -39,4 +39,14 @@ class StartExercisesViewModel(application: Application,
             worksheetExercisesList.postValue(resultList)
         }
     }
+
+    fun selectPractice(practice: String) {
+        val practiceId = practiceList.value!!.filter { pract -> pract.description == practice }[0].id
+        getPracticeWorksheets(practiceId)
+    }
+
+    fun selectWorksheet(worksheet: String) {
+        val worksheetId = practiceList.value!!.filter { wrksht -> wrksht.description == worksheet }[0].id
+        getWorksheetExercises(worksheetId)
+    }
 }

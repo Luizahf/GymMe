@@ -3,7 +3,9 @@ package com.gymme.app.ui.StartExercises
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -30,7 +32,6 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
         btn_right.setOnClickListener(this)
         btn_left.setOnClickListener(this)
 
-        var spinnerWorksheetsAdapter : ArrayAdapter<String> = ArrayAdapter<String>(this, R.layout.start_exercises, R.id.spinner_worksheets)
         setInitialLayoutInfo()
     }
 
@@ -59,6 +60,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
                 run {
                     if (practices.isNotEmpty()) {
                         practiceList = practices
+                        setPracticeSpinner(practices)
                         startExercisesViewModel.getPracticeWorksheets(practices[0].id)
                     } else {
                         Toast.makeText(this, "Não foi possível encontrar os treinos do usuário.", Toast.LENGTH_SHORT).show()
@@ -73,6 +75,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
                 run {
                     if (worksheets.isNotEmpty()) {
                         worksheetList = worksheets
+                        setWorksheetsSpinner(worksheets)
                         startExercisesViewModel.getWorksheetExercises(worksheets[0].id)
                     } else {
                         Toast.makeText(this, "Não foi possível encontrar os treinos do usuário.", Toast.LENGTH_SHORT).show()
@@ -80,10 +83,34 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
         })
+    }
 
-        // Put values in the spinners
+    fun setPracticeSpinner(practices: List<Practice>) {
+        val spinnerPractices: Spinner = findViewById(R.id.spinner_worksheets)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, practices.map { practice -> practice.description })
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerPractices.adapter = adapter
 
+        spinnerPractices.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View, position: Int, id: Long) {
+                startExercisesViewModel.selectPractice(practiceList[position].description)
+            }
+            override fun onNothingSelected(parentView: AdapterView<*>) { }
+        }
+    }
 
+    fun setWorksheetsSpinner(worksheets: List<Worksheet>) {
+        val spinnerWorksheets: Spinner = findViewById(R.id.spinner_worksheets)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, worksheets)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerWorksheets.adapter = adapter
+
+        spinnerWorksheets.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View, position: Int, id: Long) {
+                startExercisesViewModel.selectPractice(worksheetList[position].description)
+            }
+            override fun onNothingSelected(parentView: AdapterView<*>) { }
+        }
     }
 
     fun setDisplay() {
