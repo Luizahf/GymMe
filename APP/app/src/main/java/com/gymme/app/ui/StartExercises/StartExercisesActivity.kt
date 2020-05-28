@@ -12,7 +12,7 @@ import androidx.lifecycle.Observer
 import com.gymme.R
 import com.gymme.Shared.Constants
 import com.gymme.app.ui.SplashScreen.SplashScreenActivity
-import com.gymme.domain.entities.Exercise
+import com.gymme.domain.entities.CompleteExercise
 import com.gymme.domain.entities.Practice
 import com.gymme.domain.entities.Worksheet
 import kotlinx.android.synthetic.main.start_exercises.*
@@ -20,7 +20,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
     private val startExercisesViewModel: StartExercisesViewModel by viewModel()
-    var exerciseList: List<Exercise> = mutableListOf()
+    var exerciseList: List<CompleteExercise> = mutableListOf()
     private var exercise: Int = 0
     var practiceList : List<Practice> = mutableListOf()
     var worksheetList : List<Worksheet> = mutableListOf()
@@ -33,14 +33,15 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
         btn_left.setOnClickListener(this)
 
         setInitialLayoutInfo()
-    }
-
-    fun setInitialLayoutInfo() {
 
         val userId = intent.getStringExtra(Constants.USER_ID)
         startExercisesViewModel.getPractices(userId.toInt())
 
-        startExercisesViewModel.worksheetExercisesList.observe(this, Observer {
+    }
+
+    fun setInitialLayoutInfo() {
+
+        startExercisesViewModel.exercisesList.observe(this, Observer {
             it?.let {
                 exercises ->
                 run {
@@ -59,6 +60,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
                 practices ->
                 run {
                     if (practices.isNotEmpty()) {
+                        exercise = 0
                         practiceList = practices
                         setPracticeSpinner(practices)
                         startExercisesViewModel.getPracticeWorksheets(practices[0].id)
@@ -74,11 +76,12 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
                 worksheets ->
                 run {
                     if (worksheets.isNotEmpty()) {
+                        exercise = 0
                         worksheetList = worksheets
                         setWorksheetsSpinner(worksheets)
                         startExercisesViewModel.getWorksheetExercises(worksheets[0].id)
                     } else {
-                        Toast.makeText(this, "Não foi possível encontrar os treinos do usuário.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Não foi possível encontrar as fichas do usuário.", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
@@ -86,7 +89,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun setPracticeSpinner(practices: List<Practice>) {
-        val spinnerPractices: Spinner = findViewById(R.id.spinner_worksheets)
+        val spinnerPractices: Spinner = findViewById(R.id.spinner_practices)
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, practices.map { practice -> practice.description })
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerPractices.adapter = adapter
@@ -123,8 +126,25 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun setDisplay() {
-        var description = exerciseList[exercise].description
+        var description = exerciseList[exercise].exercise.description
+        val ser = exerciseList[exercise].metrics.Series
+        val repet = exerciseList[exercise].metrics.Repetitions
+        val loads = exerciseList[exercise].metrics.Load
+        val time = exerciseList[exercise].metrics.ExecutionTime
+
         exercise_description.setText(description)
+        if (ser != null) {
+            series.setText(ser.toString() + " x ")
+        }
+        if (repet != null) {
+            repetitions.setText(repet.toString())
+        }
+        if(loads != null) {
+            load.setText(loads.toString() + "Kg")
+        }
+        if (time != null) {
+            execution_time.setText(time.toString() + "s")
+        }
     }
 
     override fun onClick(view: View) {
@@ -145,6 +165,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_finish -> {
                 startActivity(Intent(this, SplashScreenActivity::class.java))
+                finish()
             }
         }
     }

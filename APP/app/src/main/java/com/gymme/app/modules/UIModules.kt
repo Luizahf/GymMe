@@ -13,6 +13,7 @@ val UIModules = module {
                 get(),
                 get(),
                 get(),
+                get(),
                 get()
         )
     }

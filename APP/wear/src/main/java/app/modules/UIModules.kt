@@ -11,6 +11,7 @@ val UIModules = module {
     viewModel {
         StartExercisesViewModel(
                 get(),
+                get(),
                 get()
         )
     }
