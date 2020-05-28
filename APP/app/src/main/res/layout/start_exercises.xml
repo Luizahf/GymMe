@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/grey_gradient_background">
@@ -10,6 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_marginTop="50dp"
+        android:backgroundTint="@color/light_grey"
         android:textAlignment="textEnd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
@@ -20,6 +22,7 @@
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_marginTop="50dp"
+        android:backgroundTint="@color/light_grey"
         android:textAlignment="textEnd"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,11 +32,10 @@
         android:id="@+id/btn_right"
         android:layout_width="60sp"
         android:layout_height="0dp"
-        android:layout_marginBottom="100dp"
         android:background="@android:color/transparent"
         android:textColor="@color/grey"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_finish_workout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_worksheets" />
 
@@ -41,27 +43,13 @@
         android:id="@+id/btn_left"
         android:layout_width="60sp"
         android:layout_height="0dp"
-        android:layout_marginBottom="100dp"
         android:background="@android:color/transparent"
         android:textColor="@color/grey"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_finish_workout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_practices" />
 
-    <Button
-        android:id="@+id/btn_finish"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_green_border"
-        android:paddingStart="50px"
-        android:paddingEnd="50px"
-        android:text="CONCLUIR treino"
-        android:textColor="#5A5A5A"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -70,10 +58,10 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/green_circle"
-        app:layout_constraintBottom_toTopOf="@+id/btn_finish"
+        app:layout_constraintBottom_toTopOf="@+id/btn_finish_workout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/txt_practice">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline5"
@@ -151,17 +139,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.58" />
 
     <TextView
         android:id="@+id/txt_practice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="Treino"
-        android:textColor="@color/light_grey"
+        android:textColor="@color/grey"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/spinner_practices"
         app:layout_constraintStart_toStartOf="@+id/spinner_practices"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -169,12 +157,24 @@
         android:id="@+id/txt_workout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="14dp"
         android:text="Ficha"
-        android:textColor="@color/light_grey"
+        android:textColor="@color/grey"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/spinner_worksheets"
         app:layout_constraintStart_toStartOf="@+id/spinner_worksheets"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_finish_workout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/round_green_border"
+        android:text="CONCLUIR EXERCICIO"
+        android:textColor="@color/grey"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

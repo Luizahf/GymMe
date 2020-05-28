@@ -31,6 +31,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
 
         btn_right.setOnClickListener(this)
         btn_left.setOnClickListener(this)
+        btn_finish_workout.setOnClickListener(this)
 
         setInitialLayoutInfo()
 
@@ -90,7 +91,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
 
     fun setPracticeSpinner(practices: List<Practice>) {
         val spinnerPractices: Spinner = findViewById(R.id.spinner_practices)
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, practices.map { practice -> practice.description })
+        val adapter = ArrayAdapter(this, R.layout.spinner_item, practices.map { practice -> practice.description })
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerPractices.adapter = adapter
 
@@ -108,7 +109,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
 
     fun setWorksheetsSpinner(worksheets: List<Worksheet>) {
         val spinnerWorksheets: Spinner = findViewById(R.id.spinner_worksheets)
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, worksheets.map { wrksht -> wrksht.description })
+        val adapter = ArrayAdapter(this, R.layout.spinner_item, worksheets.map { wrksht -> wrksht.description })
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerWorksheets.adapter = adapter
 
@@ -163,7 +164,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
                     setDisplay()
                 }
             }
-            R.id.btn_finish -> {
+            R.id.btn_finish_workout -> {
                 startActivity(Intent(this, SplashScreenActivity::class.java))
                 finish()
             }
