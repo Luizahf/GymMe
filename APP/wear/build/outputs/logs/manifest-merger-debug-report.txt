@@ -131,14 +131,14 @@ MERGED from [com.google.android.gms:play-services-tasks-license:11.6.0] C:\Users
 		ADDED from C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\APP\wear\src\main\AndroidManifest.xml:13:9-52
 	android:name
 		ADDED from C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\APP\wear\src\main\AndroidManifest.xml:8:9-37
-activity#com.gymme.app.ui.ChooseWorkout.ChooseWorkoutActivity
+activity#com.gymme.app.ui.ChooseWorkout.ChooseWorksheetActivity
 ADDED from C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\APP\wear\src\main\AndroidManifest.xml:14:9-17:80
 	android:label
 		ADDED from C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\APP\wear\src\main\AndroidManifest.xml:16:13-67
 	android:theme
 		ADDED from C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\APP\wear\src\main\AndroidManifest.xml:17:13-68
 	android:name
-		ADDED from C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\APP\wear\src\main\AndroidManifest.xml:15:13-71
+		ADDED from C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\APP\wear\src\main\AndroidManifest.xml:15:13-73
 activity#com.gymme.app.ui.StartExercises.StartExercisesActivity
 ADDED from C:\Users\Luiza\Documents\IGTI\IGTI_GymMe-master\APP\wear\src\main\AndroidManifest.xml:18:9-82
 	android:name

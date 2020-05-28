@@ -1,5 +1,6 @@
 package com.gymme.app.ui.StartExercises
 
+import Shared.Constants
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -22,6 +23,10 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.start_exercises)
 
+
+        val worksheetId = intent.getStringExtra(Constants.WORKSHEET_ID)
+        startExercisesViewModel.getWorksheetExercises(worksheetId.toInt())
+
         btn_right.setOnClickListener(this)
         btn_left.setOnClickListener(this)
         btn_finish.setOnClickListener(this)
@@ -39,10 +44,6 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
         })
-
-        var spinnerWorksheetsAdapter : ArrayAdapter<String> = ArrayAdapter<String>(this, R.layout.start_exercises, R.id.spinner_worksheets)
-
-        startExercisesViewModel.getWorksheetExercises(1)
     }
 
     fun setDisplay() {

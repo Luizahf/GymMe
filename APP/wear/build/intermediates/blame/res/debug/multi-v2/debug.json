@@ -1,6 +1,22 @@
 {
     "logs": [
         {
+            "outputFile": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\APP\\wear\\build\\intermediates\\res\\merged\\debug\\values-v26_values-v26.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Luiza\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\87bacf27a4b1133f434ca9ecfa84f24b\\res\\values-v26\\values-v26.xml",
+                    "from": {
+                        "startLines": "2,3,4,8,12,16",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,130,217,431,657,896",
+                        "endLines": "2,3,7,11,15,16",
+                        "endColumns": "74,86,12,12,12,92",
+                        "endOffsets": "125,212,426,652,891,984"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\APP\\wear\\build\\intermediates\\res\\merged\\debug\\values-az_values-az.arsc.flat",
             "map": [
                 {
@@ -69,22 +85,6 @@
                         "startOffsets": "3833",
                         "endColumns": "220",
                         "endOffsets": "4049"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\APP\\wear\\build\\intermediates\\res\\merged\\debug\\values-v26_values-v26.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Luiza\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\87bacf27a4b1133f434ca9ecfa84f24b\\res\\values-v26\\values-v26.xml",
-                    "from": {
-                        "startLines": "2,3,4,8,12,16",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,130,217,431,657,896",
-                        "endLines": "2,3,7,11,15,16",
-                        "endColumns": "74,86,12,12,12,92",
-                        "endOffsets": "125,212,426,652,891,984"
                     }
                 }
             ]
@@ -3280,6 +3280,22 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\APP\\wear\\build\\intermediates\\res\\merged\\debug\\values-v22_values-v22.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Luiza\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\87bacf27a4b1133f434ca9ecfa84f24b\\res\\values-v22\\values-v22.xml",
+                    "from": {
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,553",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,548,896"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\APP\\wear\\build\\intermediates\\res\\merged\\debug\\values-pl_values-pl.arsc.flat",
             "map": [
                 {
@@ -3348,22 +3364,6 @@
                         "startOffsets": "2817,2923,3123,3247,3359,3569,3696,4023,4253,4364,4570,4700,4918,5109,5208,5304",
                         "endColumns": "105,199,123,111,209,126,127,229,110,205,129,217,190,98,95,112",
                         "endOffsets": "2918,3118,3242,3354,3564,3691,3819,4248,4359,4565,4695,4913,5104,5203,5299,5412"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\APP\\wear\\build\\intermediates\\res\\merged\\debug\\values-v22_values-v22.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Luiza\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\87bacf27a4b1133f434ca9ecfa84f24b\\res\\values-v22\\values-v22.xml",
-                    "from": {
-                        "startLines": "2,3,4,9",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,130,217,553",
-                        "endLines": "2,3,8,13",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "125,212,548,896"
                     }
                 }
             ]

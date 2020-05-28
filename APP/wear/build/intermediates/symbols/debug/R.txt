@@ -1446,7 +1446,7 @@ int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_choose_practice 0x7f0b001c
-int layout activity_choose_workout 0x7f0b001d
+int layout activity_choose_worksheet 0x7f0b001d
 int layout activity_splash_screen 0x7f0b001e
 int layout custom_dialog 0x7f0b001f
 int layout design_bottom_navigation_item 0x7f0b0020

@@ -1,10 +1,10 @@
 package com.gymme.app.ui.ChoosePractice
 
+import android.widget.AdapterView
 import Shared.Constants
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
@@ -12,9 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.gymme.R
-import com.gymme.app.ui.ChooseWorkout.ChooseWorkoutActivity
+import com.gymme.app.ui.ChooseWorkout.ChooseWorksheetActivity
 import com.gymme.domain.entities.Practice
-
 import kotlinx.android.synthetic.main.activity_choose_practice.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -82,7 +81,7 @@ class ChoosePracticeActivity : AppCompatActivity(), View.OnClickListener {
 
         when (id) {
             R.id.btn_next -> {
-                val intent = Intent(this, ChooseWorkoutActivity::class.java)
+                val intent = Intent(this, ChooseWorksheetActivity::class.java)
                 intent.putExtra(Constants.PRACTICE_ID, selectedPracticeId.value!!.toString())
                 startActivity(intent)
                 finish()

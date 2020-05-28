@@ -21,7 +21,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme.NoActionBar" >
         <activity
-            android:name="com.gymme.app.ui.ChooseWorkout.ChooseWorkoutActivity"
+            android:name="com.gymme.app.ui.ChooseWorkout.ChooseWorksheetActivity"
             android:label="@string/title_activity_choose_practice"
             android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
         <activity android:name="com.gymme.app.ui.StartExercises.StartExercisesActivity" />

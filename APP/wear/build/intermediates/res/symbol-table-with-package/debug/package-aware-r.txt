@@ -1447,7 +1447,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_choose_practice
-layout activity_choose_workout
+layout activity_choose_worksheet
 layout activity_splash_screen
 layout custom_dialog
 layout design_bottom_navigation_item
