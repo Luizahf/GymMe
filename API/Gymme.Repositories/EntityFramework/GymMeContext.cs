@@ -33,13 +33,13 @@ namespace Gymme.Repositories.EntityFramework
             {
                 entity.ToTable("users");
                 entity.HasKey(e => e.Id);
+                entity.Property(s => s.LoginId).HasColumnName("id_login");
             });
 
             modelBuilder.Entity<LoginEntity>(entity =>
             {
                 entity.ToTable("logins");
                 entity.HasKey(e => e.Id);
-                entity.Property(s => s.IdUser).HasColumnName("id_user");
                 entity.Property(s => s.Login).HasColumnName("login_name");
                 entity.Property(s => s.Password).HasColumnName("password");
             });

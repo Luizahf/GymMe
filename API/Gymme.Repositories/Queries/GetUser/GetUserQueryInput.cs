@@ -5,11 +5,11 @@ namespace Gymme.Repositories.Queries.GetUser
 {
     public class GetUserQueryInput : IQueryInput<UserEntity>
     {
-        public int UserId { get; set; }
+        public int LoginId { get; set; }
 
-        public GetUserQueryInput(int userId)
+        public GetUserQueryInput(int loginId)
         {
-            UserId = userId;
+            LoginId = loginId;
         }
     }
 }

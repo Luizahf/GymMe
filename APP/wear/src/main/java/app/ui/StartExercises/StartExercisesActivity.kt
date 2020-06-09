@@ -38,6 +38,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
                 run {
                     if (exercises.isNotEmpty()) {
                         exerciseList = exercises
+                        exercise = 0
                         setDisplay()
                     } else {
                         Toast.makeText(this, "Não foi possível encontrar exercícios para essa ficha.", Toast.LENGTH_SHORT).show()
@@ -74,7 +75,7 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
 
         when (id) {
             R.id.btn_right -> {
-                if (exercise !== exerciseList.size-1) {
+                if (exerciseList != null && !exerciseList.isEmpty() && exercise !== exerciseList.size-1) {
                     exercise++
                     setDisplay()
                 }

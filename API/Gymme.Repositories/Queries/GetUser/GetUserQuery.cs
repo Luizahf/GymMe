@@ -13,7 +13,7 @@ namespace Gymme.Repositories.Queries.GetUser
             using (var context = new GymMeContext())
             {
                 return context.UserEntity
-                              .Where(s => s.Id == input.UserId)
+                              .Where(s => s.LoginId == input.LoginId)
                               .FirstOrDefault();
             }
         }

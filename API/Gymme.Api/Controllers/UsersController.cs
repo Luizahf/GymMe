@@ -26,6 +26,13 @@ namespace Gymme.Api.Controllers
             var result = await Mediator.Send(new UserCommand(login, password));
             return Ok(result);
         }
+
+        [HttpGet("/insert/{login}/{password}")]
+        public async Task<ActionResult<UserEntity>> InsertUser(string login, string password)
+        {
+            //var result = await DataProvider.Insert<UserEntity>(new UserEntity(login, password));
+            return Ok();
+        }
     }
 }
  

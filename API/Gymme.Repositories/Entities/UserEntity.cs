@@ -10,6 +10,7 @@ namespace Gymme.Repositories.Entities
         public int? Height { get; set; }
         public int? Weight { get; set; }
         public Char? Gender { get; set; }
+        public int LoginId { get; set; }
 
         internal override IEnumerable<string> CheckIntegrity()
         {

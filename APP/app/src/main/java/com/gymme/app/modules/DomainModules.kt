@@ -9,4 +9,5 @@ internal val DomainModules = module {
     factory { PracticeHandler(repository = get()) }
     factory { PracticeWorksheetsHandler(repository = get()) }
     factory { MetricsHandler(repository = get()) }
+    factory { LoginHandler(repository = get()) }
 }

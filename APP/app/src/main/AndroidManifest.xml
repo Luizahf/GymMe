@@ -12,7 +12,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".app.ui.Login.LoginActivity"></activity>
+        <activity android:name=".app.ui.LoginRegistration.LoginRegistrationActivity"></activity>
+        <activity android:name=".app.ui.Login.LoginActivity" />
         <activity android:name=".app.ui.StartExercises.StartExercisesActivity" />
         <activity android:name=".app.ui.MyWorksheet.WorksheetAdapter" />
         <activity android:name=".app.ui.MyWorksheet.MyWorksheetActivity" />

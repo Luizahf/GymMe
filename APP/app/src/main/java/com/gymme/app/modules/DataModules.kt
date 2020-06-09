@@ -31,4 +31,5 @@ internal val DataModules = module {
     factory { PracticeRepository(get()) } bind IPracticeRepository::class
     factory { PracticeWorksheetsRepository(get()) } bind IPracticeWorksheetseRepository::class
     factory { MetricsRepository(get(), get()) } bind IMetricsRepository::class
+    factory { LoginRepository(get()) } bind ILoginRepository::class
 }

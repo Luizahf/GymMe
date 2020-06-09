@@ -30,5 +30,16 @@ namespace Gymme.Api.Controllers
             var result = await DataProvider.Query(query);
             return Ok(result);
         }
+
+        [HttpGet("insert/{login}/{password}")]
+        public async Task<ActionResult<LoginEntity>> InsertLogin(string login, string password)
+        {
+            var result = DataProvider.Insert(new LoginEntity(login, password,""));
+            if (result.IsValid)
+                return Ok(result);
+
+            throw new Exception(result.ErrorMessages.FirstOrDefault());
+        }
     }
 }
+

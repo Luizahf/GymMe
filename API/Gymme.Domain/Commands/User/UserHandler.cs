@@ -30,7 +30,7 @@ namespace Gymme.Domain.Commands.User
 
             if (loginResult != null)
             {
-                var userQuery = new GetUserQueryInput(loginResult.IdUser);
+                var userQuery = new GetUserQueryInput(loginResult.Id);
                 result = await DataProvider.Query(userQuery);
 
             }
