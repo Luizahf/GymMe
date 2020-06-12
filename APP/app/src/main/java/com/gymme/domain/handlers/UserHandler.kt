@@ -9,7 +9,7 @@ class UserHandler(private val repository: IUserRepository) {
         return repository.getUser(login, password)
     }
 
-    suspend fun executeInsertUser(login: String, password: String): InsertUser {
-        return repository.insertUser(login, password)
+    suspend fun executeInsertUser(name: String, height: Int?, weight: Int?, loginId: Int): InsertUser {
+        return repository.insertUser(name, height, weight, loginId)
     }
 }

@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.gymme.R
+import com.gymme.Shared.Constants
 import com.gymme.app.ui.SplashScreen.SplashScreenActivity
 import kotlinx.android.synthetic.main.activity_user_registration.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -44,19 +45,20 @@ class UserRegistrationActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_confirm -> {
                 if (verifyFields()) {
-                    userViewModel.insertUser(register_login.text.toString(), password.text.toString())
+                    val loginId = intent.getStringExtra(Constants.LOGIN_ID)
+                    userViewModel.insertUser(user_name.text.toString(), user_height.text.toString().toIntOrNull(), user_weight.text.toString().toIntOrNull(), loginId.toInt())
                 }
             }
         }
     }
 
     private fun verifyFields() : Boolean {
-        if (register_login.text.toString() == "") {
-            Toast.makeText(this, "Login não preenchido.", Toast.LENGTH_SHORT).show()
-        } else if (password.text.toString() == "") {
-            Toast.makeText(this, "Senha não preenchida.", Toast.LENGTH_SHORT).show()
-        } else if (password.text.toString() != confirm_password.text.toString()) {
-            Toast.makeText(this, "As senhas não combinam.", Toast.LENGTH_SHORT).show()
+        if (user_name.text.toString().isEmpty()) {
+            Toast.makeText(this, "Nome não preenchido.", Toast.LENGTH_SHORT).show()
+        } else if (!user_height.text.toString().matches("\\d+(\\.\\d+)?".toRegex())) {
+            Toast.makeText(this, "Altura incorreta, preencha apenas com numeros.", Toast.LENGTH_SHORT).show()
+        } else if (!user_weight.text.toString().matches("\\d+(\\.\\d+)?".toRegex())) {
+            Toast.makeText(this, "Peso incorreto, preencha apenas com numeros.", Toast.LENGTH_SHORT).show()
         } else {
             return true
         }

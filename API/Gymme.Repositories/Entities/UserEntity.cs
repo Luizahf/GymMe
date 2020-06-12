@@ -12,6 +12,19 @@ namespace Gymme.Repositories.Entities
         public Char? Gender { get; set; }
         public int LoginId { get; set; }
 
+        public UserEntity()
+        {
+        }
+
+        public UserEntity(string name, int? height, int? weight, char? gender, int loginId)
+        {
+            Name = name;
+            Height = height;
+            Weight = weight;
+            Gender = gender;
+            LoginId = loginId;
+        }
+
         internal override IEnumerable<string> CheckIntegrity()
         {
             #region .: Error Strings :.

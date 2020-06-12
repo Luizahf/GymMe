@@ -38,10 +38,10 @@ class UserRepository (
         }
     }
 
-    override suspend fun insertUser(login: String, password :String): InsertUser {
+    override suspend fun insertUser(name: String, height: Int?, weight: Int?, loginId: Int): InsertUser {
         try {
             val response: InsertUserResponse? =
-                    api.insertUser(login, password)!!.execute().body()
+                    api.insertUser(name, height, weight, null, loginId)!!.execute().body()
             if (response != null && response.sucess)
             {
                 return InsertUser (

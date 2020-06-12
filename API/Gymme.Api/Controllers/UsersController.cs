@@ -27,11 +27,16 @@ namespace Gymme.Api.Controllers
             return Ok(result);
         }
 
-        [HttpGet("/insert/{login}/{password}")]
-        public async Task<ActionResult<UserEntity>> InsertUser(string login, string password)
+        [HttpGet("insert")]
+        public async Task<ActionResult<UserEntity>> InsertUser([FromBody] string name, int? height, int? weight, char? gender, int loginId)
         {
-            //var result = await DataProvider.Insert<UserEntity>(new UserEntity(login, password));
-            return Ok();
+            var newUser = new UserEntity(name, height, weight, gender, loginId);
+            var result = await DataProvider.InsertAsync(newUser);
+
+            if (result.IsValid)
+                return Ok(newUser);
+
+            return BadRequest(result.ErrorMessages);
         }
     }
 }

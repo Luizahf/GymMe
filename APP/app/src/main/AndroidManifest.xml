@@ -17,6 +17,7 @@
         <activity android:name=".app.ui.StartExercises.StartExercisesActivity" />
         <activity android:name=".app.ui.MyWorksheet.WorksheetAdapter" />
         <activity android:name=".app.ui.MyWorksheet.MyWorksheetActivity" />
+        <activity android:name=".app.ui.UserRegistration.UserRegistrationActivity" />
         <activity android:name=".app.ui.SplashScreen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

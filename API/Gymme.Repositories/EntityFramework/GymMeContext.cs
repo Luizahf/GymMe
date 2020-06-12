@@ -16,7 +16,7 @@ namespace Gymme.Repositories.EntityFramework
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=gymme;user=root;password=amora01");
+            optionsBuilder.UseMySQL("server=127.0.0.1;database=gymme;user=root;password=amora01");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -42,6 +42,7 @@ namespace Gymme.Repositories.EntityFramework
                 entity.HasKey(e => e.Id);
                 entity.Property(s => s.Login).HasColumnName("login_name");
                 entity.Property(s => s.Password).HasColumnName("password");
+                entity.Ignore(s => s.ErrorMessage);
             });
 
             modelBuilder.Entity<WorksheetEntity>(entity =>

@@ -19,31 +19,19 @@ namespace Gymme.Repositories.EntityFramework
             ServiceLocator = serviceLocator;
         }
 
-        public void DeleteById(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public Task<IEnumerable<T>> GetAllAsync<T>() where T : EntityBase =>
+            Task.FromResult(Context.Set<T>().AsEnumerable());
 
-        public IEnumerable<T> GetAll<T>() where T : EntityBase =>
-            Context.Set<T>().ToList();
-
-        public T GetById<T>(int id) where T : EntityBase
-        {
-            return Context.Set<T>().Find(id);
-        }
-
-        public EntityValidationResult Insert<T>(T entity) where T : EntityBase
+        public async Task<EntityValidationResult> InsertAsync<T>(T entity) where T : EntityBase
         {
             var validation = new EntityValidationResult(entity.CheckIntegrity());
             if (validation.IsValid)
-                Context.Set<T>().Add(entity);
+            {
+                await Context.Set<T>().AddAsync(entity);
+                await Context.SaveChangesAsync();
+            }
 
             return validation;
-        }
-
-        public EntityValidationResult Update<T>(T entity) where T : EntityBase
-        {
-            throw new NotImplementedException();
         }
 
         public async Task<TOutput> Query<TOutput>(IQueryInput<TOutput> query)
@@ -76,6 +64,18 @@ namespace Gymme.Repositories.EntityFramework
             
             handler = ServiceLocator.GetService(QueryHandlerType.MakeGenericType(queryInputType, queryOutputType));
             return handler != null;
+        }
+
+        public Task<T> GetByIdAsync<T>(int id) where T : EntityBase => Task.FromResult(Context.Set<T>().Find(id));
+
+        public Task<EntityValidationResult> UpdateAsync<T>(T entity) where T : EntityBase
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteByIdAsync(int id)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

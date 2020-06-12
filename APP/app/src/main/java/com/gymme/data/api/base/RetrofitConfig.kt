@@ -15,8 +15,4 @@ object RetrofitConfig {
     fun<s> createService(serviceClass: Class<s>): s {
         return retrofit.create(serviceClass)
     }
-
-    fun getWorksheetExercises() : GymMeApi {
-        return retrofit.create(GymMeApi::class.java)
-    }
 }

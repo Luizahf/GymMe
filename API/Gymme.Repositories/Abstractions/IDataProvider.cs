@@ -14,27 +14,27 @@ namespace Gymme.Repositories.Abstractions
         /// Provides the entity from the database based on it's id.
         /// </summary>
         /// <typeparam name="T">Generic entity type</typeparam>
-        T GetById<T>(int id) where T : EntityBase;
+        Task<T> GetByIdAsync<T>(int id) where T : EntityBase;
 
         /// <summary>
         /// Provides all objects from a source.
         /// </summary>
-        IEnumerable<T> GetAll<T>() where T : EntityBase;
+        Task<IEnumerable<T>> GetAllAsync<T>() where T : EntityBase;
 
         /// <summary>
         /// Inserts a new object in the source.
         /// </summary>
-        EntityValidationResult Insert<T>(T entity) where T : EntityBase;
+        Task<EntityValidationResult> InsertAsync<T>(T entity) where T : EntityBase;
 
         /// <summary>
         /// Updates an object in the source.
         /// </summary>
-        EntityValidationResult Update<T>(T entity) where T : EntityBase;
+        Task<EntityValidationResult> UpdateAsync<T>(T entity) where T : EntityBase;
 
         /// <summary>
         /// Deletes an object from a source based on it's id;
         /// </summary>
-        void DeleteById(int id);
+        Task DeleteByIdAsync(int id);
 
         /// <summary>
         /// Executes given query at the source.

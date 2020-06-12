@@ -10,9 +10,9 @@ class UserRegistrationViewModel(application: Application,
                                 private val userHandler: UserHandler) : ViewModelBase(application) {
     var user : MutableLiveData<InsertUser> = MutableLiveData()
 
-    fun insertUser(login: String, password: String) {
+    fun insertUser(name: String, height: Int?, weight: Int?, loginId: Int) {
         doAsyncWork {
-            val result = userHandler.executeInsertUser(login, password)
+            val result = userHandler.executeInsertUser(name, height, weight, loginId)
             user.postValue(result)
         }
     }

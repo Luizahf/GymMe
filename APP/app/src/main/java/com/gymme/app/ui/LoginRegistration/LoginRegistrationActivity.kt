@@ -7,7 +7,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.gymme.R
+import com.gymme.Shared.Constants
 import com.gymme.app.ui.SplashScreen.SplashScreenActivity
+import com.gymme.app.ui.UserRegistration.UserRegistrationActivity
 import kotlinx.android.synthetic.main.activity_login_registration.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -19,16 +21,13 @@ class LoginRegistrationActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_login_registration)
 
         loginViewModel.login.observe(this, Observer {
-            it?.let {
-                login ->
-                run {
-                    if (login.password.isNotEmpty()) {
-                        // TODO implement next registration
-                    } else {
-                        Toast.makeText(this, login.login, Toast.LENGTH_SHORT).show()
-                    }
-                }
-            }
+            val intent = Intent(this, UserRegistrationActivity::class.java)
+            intent.putExtra(Constants.LOGIN_ID, it.id.toString())
+            startActivity(intent)
+        })
+
+        loginViewModel.errorMessage.observe(this, Observer {
+            Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
         })
 
         btn_return.setOnClickListener(this)
@@ -44,7 +43,7 @@ class LoginRegistrationActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_confirm -> {
                 if (verifyFields()) {
-                    loginViewModel.insertUser(register_login.text.toString(), password.text.toString())
+                    loginViewModel.insertLogin(register_login.text.toString(), password.text.toString())
                 }
             }
         }

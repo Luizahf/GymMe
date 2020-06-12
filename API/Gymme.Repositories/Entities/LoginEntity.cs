@@ -10,6 +10,10 @@ namespace Gymme.Repositories.Entities
         public string Password { get; set; }
         public string ErrorMessage { get; set; }
 
+        public LoginEntity()
+        {
+        }
+
         public LoginEntity(string login, string password, string error)
         {
             Login = login;
@@ -42,10 +46,10 @@ namespace Gymme.Repositories.Entities
             if (Login.Contains(" "))
                 yield return LOGIN_WHITESPACE;
 
-            if (String.IsNullOrWhiteSpace(Password))
+            if (string.IsNullOrWhiteSpace(Password))
                 yield return PASSWORD_INEXISTENT;
 
-            if (String.IsNullOrWhiteSpace(Login))
+            if (string.IsNullOrWhiteSpace(Login))
                 yield return LOGIN_INEXISTENT;
         }
     }
