@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import com.gymme.R
 import com.gymme.Shared.Constants
 import com.gymme.app.ui.SplashScreen.SplashScreenActivity
+import com.gymme.app.ui.StartExercises.StartExercisesActivity
 import kotlinx.android.synthetic.main.activity_user_registration.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -20,16 +21,13 @@ class UserRegistrationActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_user_registration)
 
         userViewModel.user.observe(this, Observer {
-            it?.let {
-                user ->
-                run {
-                    if (user.sucess) {
-                        // TODO implement next registration
-                    } else {
-                        Toast.makeText(this, user.message, Toast.LENGTH_SHORT).show()
-                    }
-                }
-            }
+            val intent = Intent(this, StartExercisesActivity::class.java)
+            intent.putExtra(Constants.USER_ID, it.Id.toString())
+            startActivity(intent)
+        })
+
+        userViewModel.errorMessage.observe(this, Observer {
+            Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
         })
 
         btn_return.setOnClickListener(this)
@@ -55,9 +53,9 @@ class UserRegistrationActivity : AppCompatActivity(), View.OnClickListener {
     private fun verifyFields() : Boolean {
         if (user_name.text.toString().isEmpty()) {
             Toast.makeText(this, "Nome não preenchido.", Toast.LENGTH_SHORT).show()
-        } else if (!user_height.text.toString().matches("\\d+(\\.\\d+)?".toRegex())) {
+        } else if (user_height.text.toString().isNotEmpty() && !user_height.text.toString().matches("\\d+(\\.\\d+)?".toRegex())) {
             Toast.makeText(this, "Altura incorreta, preencha apenas com numeros.", Toast.LENGTH_SHORT).show()
-        } else if (!user_weight.text.toString().matches("\\d+(\\.\\d+)?".toRegex())) {
+        } else if (user_weight.text.toString().isNotEmpty() && !user_weight.text.toString().matches("\\d+(\\.\\d+)?".toRegex())) {
             Toast.makeText(this, "Peso incorreto, preencha apenas com numeros.", Toast.LENGTH_SHORT).show()
         } else {
             return true

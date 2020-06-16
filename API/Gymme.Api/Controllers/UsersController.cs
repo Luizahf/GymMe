@@ -27,10 +27,9 @@ namespace Gymme.Api.Controllers
             return Ok(result);
         }
 
-        [HttpGet("insert")]
-        public async Task<ActionResult<UserEntity>> InsertUser([FromBody] string name, int? height, int? weight, char? gender, int loginId)
+        [HttpPost("insert")]
+        public async Task<ActionResult<UserEntity>> InsertUser([FromBody] UserEntity newUser)
         {
-            var newUser = new UserEntity(name, height, weight, gender, loginId);
             var result = await DataProvider.InsertAsync(newUser);
 
             if (result.IsValid)

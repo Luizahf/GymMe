@@ -5,6 +5,7 @@ import com.gymme.data.data.InsertUserResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
 
 
@@ -20,8 +21,8 @@ interface GymMeApi {
     fun getUser(@Path("login") login: String,
                 @Path("password") password: String) : Call<UserEntity>?
 
-    @GET("users/insert")
-    fun insertUser(@Body name: String, @Body height: Int?, @Body weight: Int?, @Body gender: Char?, @Body loginId: Int) : Call<InsertUserResponse>?
+    @POST("users/insert")
+    fun insertUser(@Body newUser: InsertUserRequest) : Call<UserEntity>?
 
     @GET("login/insert/{login}/{password}")
     fun insertLogin(@Path("login") login: String,

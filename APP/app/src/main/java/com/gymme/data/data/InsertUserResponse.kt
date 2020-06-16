@@ -1,10 +1,8 @@
 package com.gymme.data.data
 
-import com.gymme.data.data.Base.UserEntity
-import java.io.Serializable
+import com.gymme.domain.entities.User
 
-data class InsertUserResponse (
-        var user : UserEntity,
-        var sucess : Boolean,
-        var message: String
-) : Serializable
+interface InsertUserResponse {
+    fun failure(statusCode: Int?, message: String)
+    fun success(user: User)
+}

@@ -7,5 +7,14 @@ data class UserEntity (
         var name: String,
         var height: Int?,
         var weight: Int?,
-        var gender: Char?
+        var gender: Char?,
+        var loginId: Int
+) : Serializable
+
+data class InsertUserRequest (
+        var name: String,
+        var height: Int?,
+        var weight: Int?,
+        var gender: Char?,
+        var loginId: Int
 ) : Serializable
