@@ -1,4 +1,4 @@
-package com.gymme.app.ui.LoginRegistration
+package com.gymme.app.ui.Registrations.LoginRegistration
 
 import android.app.Application
 import androidx.lifecycle.MutableLiveData

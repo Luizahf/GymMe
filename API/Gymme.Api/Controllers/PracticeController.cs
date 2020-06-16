@@ -6,7 +6,6 @@ using Gymme.Repositories.Abstractions;
 using Gymme.Repositories.Entities;
 using Gymme.Repositories.Queries.GetUserPractices;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Gymme.Api.Controllers
@@ -31,6 +30,18 @@ namespace Gymme.Api.Controllers
             var query = new GetUserPracticesQueryInput(userId);
             var result = await DataProvider.Query(query);
             return Ok(result);
+        }
+
+
+        [HttpPost("insert")]
+        public async Task<ActionResult<PracticeEntity>> InsertPractice([FromBody] PracticeEntity newPractice)
+        {
+            var result = await DataProvider.InsertAsync(newPractice);
+
+            if (result.IsValid)
+                return Ok(newPractice);
+
+            return BadRequest(result.ErrorMessages);
         }
     }
 }

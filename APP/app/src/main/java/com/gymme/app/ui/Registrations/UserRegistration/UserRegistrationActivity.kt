@@ -1,4 +1,4 @@
-package com.gymme.app.ui.UserRegistration
+package com.gymme.app.ui.Registrations.UserRegistration
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.gymme.R
 import com.gymme.Shared.Constants
+import com.gymme.app.ui.Registrations.PracticeRegistration.PracticeRegistrationActivity
 import com.gymme.app.ui.SplashScreen.SplashScreenActivity
 import com.gymme.app.ui.StartExercises.StartExercisesActivity
 import kotlinx.android.synthetic.main.activity_user_registration.*
@@ -21,7 +22,7 @@ class UserRegistrationActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_user_registration)
 
         userViewModel.user.observe(this, Observer {
-            val intent = Intent(this, StartExercisesActivity::class.java)
+            val intent = Intent(this, PracticeRegistrationActivity::class.java)
             intent.putExtra(Constants.USER_ID, it.Id.toString())
             startActivity(intent)
         })

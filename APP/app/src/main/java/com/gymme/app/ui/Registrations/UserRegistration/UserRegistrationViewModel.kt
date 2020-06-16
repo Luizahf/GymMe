@@ -1,10 +1,9 @@
-package com.gymme.app.ui.UserRegistration
+package com.gymme.app.ui.Registrations.UserRegistration
 
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
 import com.gymme.app.ViewModelBase
 import com.gymme.data.data.InsertUserResponse
-import com.gymme.domain.Responses.InsertUser
 import com.gymme.domain.entities.User
 import com.gymme.domain.handlers.UserHandler
 

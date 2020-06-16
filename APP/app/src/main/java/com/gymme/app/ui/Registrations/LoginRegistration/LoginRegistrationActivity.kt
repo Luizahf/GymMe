@@ -1,4 +1,4 @@
-package com.gymme.app.ui.LoginRegistration
+package com.gymme.app.ui.Registrations.LoginRegistration
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +9,7 @@ import androidx.lifecycle.Observer
 import com.gymme.R
 import com.gymme.Shared.Constants
 import com.gymme.app.ui.SplashScreen.SplashScreenActivity
-import com.gymme.app.ui.UserRegistration.UserRegistrationActivity
+import com.gymme.app.ui.Registrations.UserRegistration.UserRegistrationActivity
 import kotlinx.android.synthetic.main.activity_login_registration.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

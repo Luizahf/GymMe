@@ -12,3 +12,11 @@ data class PracticeEntity(
         var userId: Int
 
 ) : Serializable
+
+data class InsertPracticeRequest (
+        var description: String,
+        var goal: String?,
+        var dueDate: Date?,
+        var frequency: Int?,
+        var userId: Int
+) : Serializable
