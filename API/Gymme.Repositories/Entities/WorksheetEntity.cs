@@ -12,7 +12,14 @@ namespace Gymme.Repositories.Entities
 
         internal override IEnumerable<string> CheckIntegrity()
         {
-            throw new NotImplementedException();
+            #region .: Error Strings :.
+
+            const string Description_Unvalid_Error = "A descrição deve ter entre 5 e 10 caracteres.";
+
+            #endregion
+
+            if (Description.Length > 4 || Description.Length < 11)
+                yield return Description_Unvalid_Error;
         }
     }
 }

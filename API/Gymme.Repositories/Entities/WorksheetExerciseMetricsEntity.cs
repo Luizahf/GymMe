@@ -1,19 +1,27 @@
 ﻿using Gymme.Repositories.Base;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Gymme.Repositories.Entities
 {
     public class WorksheetExerciseMetricsEntity : EntityBase
     {
+        public WorksheetExerciseMetricsEntity()
+        {
+        }
+
+        public WorksheetExerciseMetricsEntity(int worksheetExerciseId, int metricsId)
+        {
+            WorksheetExerciseId = worksheetExerciseId;
+            MetricsId = metricsId;
+        }
+
         public int WorksheetExerciseId { get; set; }
 
         public int MetricsId { get; set; }
 
         internal override IEnumerable<string> CheckIntegrity()
         {
-            throw new NotImplementedException();
+            return new List<string>();
         }
     }
 }

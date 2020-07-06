@@ -6,6 +6,7 @@ import com.gymme.app.ui.MyWorksheet.MyWorksheetViewModel
 import com.gymme.app.ui.Registrations.PracticeRegistration.PracticeRegistrationViewModel
 import com.gymme.app.ui.StartExercises.StartExercisesViewModel
 import com.gymme.app.ui.Registrations.UserRegistration.UserRegistrationViewModel
+import com.gymme.app.ui.Registrations.WorksheetRegistration.WorksheetRegistrationViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -51,6 +52,13 @@ val UIModules = module {
 
     viewModel {
         PracticeRegistrationViewModel(
+                get(),
+                get()
+        )
+    }
+
+    viewModel {
+        WorksheetRegistrationViewModel(
                 get(),
                 get()
         )

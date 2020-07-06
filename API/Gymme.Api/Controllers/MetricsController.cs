@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Gymme.Domain.ApiRequests;
+using Gymme.Domain.Commands.Metrics;
 using Gymme.Repositories.Abstractions;
 using Gymme.Repositories.Entities;
 using Gymme.Repositories.Queries.GetExerciseMetrics;
@@ -30,6 +32,13 @@ namespace Gymme.Api.Controllers
         {
             var query = new GetExerciseMetricsQueryInput(exerciseId, worksheetId);
             var result = await DataProvider.Query(query);
+            return Ok(result);
+        }
+
+        [HttpPost("insert")]
+        public async Task<ActionResult<WorksheetEntity>> InsertExerciseMetrics([FromBody] InsertExerciseMetricsRequest request)
+        {
+            var result = await Mediator.Send(new InsertExerciseMetricsCommand(request.ExerciseId, request.WorksheetId, request.Metrics));
             return Ok(result);
         }
     }

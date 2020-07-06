@@ -24,6 +24,9 @@ interface GymMeApi {
     @POST("users/insert")
     fun insertUser(@Body newUser: InsertUserRequest) : Call<UserEntity>?
 
+    @POST("worksheetExercises/insert")
+    fun insertWorksheetExercises(@Body newWorksheetExercises: InsertWorksheetExercisesRequest) : Call<WorksheetEntity>?
+
     @POST("practice/insert")
     fun insertPractice(@Body newPractice: InsertPracticeRequest) : Call<PracticeEntity>?
 

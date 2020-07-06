@@ -12,7 +12,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".app.ui.Registrations.PracticeRegistration.PracticeRegistrationActivity"></activity>
+        <activity android:name=".app.ui.Registrations.WorksheetRegistration.WorksheettRegistrationActivity"></activity>
+        <activity android:name=".app.ui.Registrations.PracticeRegistration.PracticeRegistrationActivity" />
         <activity android:name=".app.ui.Registrations.LoginRegistration.LoginRegistrationActivity" />
         <activity android:name=".app.ui.Login.LoginActivity" />
         <activity android:name=".app.ui.StartExercises.StartExercisesActivity" />

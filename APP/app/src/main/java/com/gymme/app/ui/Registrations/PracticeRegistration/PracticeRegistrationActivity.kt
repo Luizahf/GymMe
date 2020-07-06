@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import com.gymme.R
 import com.gymme.Shared.Constants
 import com.gymme.app.ui.Registrations.UserRegistration.UserRegistrationActivity
+import com.gymme.app.ui.Registrations.WorksheetRegistration.WorksheettRegistrationActivity
 import com.gymme.app.ui.StartExercises.StartExercisesActivity
 import kotlinx.android.synthetic.main.activity_practice_registration.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -21,8 +22,8 @@ class PracticeRegistrationActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_practice_registration)
 
         practiceViewModel.practice.observe(this, Observer {
-            val intent = Intent(this, StartExercisesActivity::class.java)
-            intent.putExtra(Constants.USER_ID, it.id.toString())
+            val intent = Intent(this, WorksheettRegistrationActivity::class.java)
+            intent.putExtra(Constants.PRACTICE_ID, it.id.toString())
             startActivity(intent)
         })
 

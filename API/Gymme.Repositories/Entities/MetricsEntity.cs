@@ -6,6 +6,18 @@ namespace Gymme.Repositories.Entities
 {
     public class MetricsEntity : EntityBase
     {
+        public MetricsEntity()
+        {
+        }
+
+        public MetricsEntity(int? series, int? repetitions, int? load, int? executionTime)
+        {
+            Series = series;
+            Repetitions = repetitions;
+            Load = load;
+            ExecutionTime = executionTime;
+        }
+
         public int? Series { get; set; }
         public int? Repetitions { get; set; }
         public int? Load { get; set; }
@@ -13,7 +25,7 @@ namespace Gymme.Repositories.Entities
 
         internal override IEnumerable<string> CheckIntegrity()
         {
-            throw new NotImplementedException();
+            return new List<string>();
         }
     }
 }
