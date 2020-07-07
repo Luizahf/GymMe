@@ -17,6 +17,9 @@ interface GymMeApi {
     fun getMetrics(@Path("worksheetId") worksheetId: Int,
                    @Path("exerciseId") exerciseId: Int): Call<MetricsEntity>?
 
+    @POST("metrics/insert")
+    fun insertExerciseMetrics(@Body newExerciseMetrics: InsertWorksheetExerciseMetricsRequest) : Call<WorksheetExerciseMetricsEntity>?
+
     @GET("users/{login}/{password}")
     fun getUser(@Path("login") login: String,
                 @Path("password") password: String) : Call<UserEntity>?

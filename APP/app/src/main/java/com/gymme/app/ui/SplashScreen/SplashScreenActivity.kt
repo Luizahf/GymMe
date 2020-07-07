@@ -20,6 +20,8 @@ class SplashScreenActivity : AppCompatActivity(), View.OnClickListener {
 
         btn_worksheet.setOnClickListener(this)
         btn_new_workout.setOnClickListener(this)
+
+
     }
 
     override fun onClick(view: View) {

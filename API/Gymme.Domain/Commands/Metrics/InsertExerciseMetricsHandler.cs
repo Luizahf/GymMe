@@ -40,6 +40,7 @@ namespace Gymme.Domain.Commands.Metrics
             var worksheetExerciseMetrics = await DataProvider.Query(getWorksheetExerciseMetrics);
 
             result.WorksheetExerciseId = worksheetExerciseMetrics.Id;
+            result.MetricsId = worksheetExerciseMetrics.Id;
             return result;
         }
     }
