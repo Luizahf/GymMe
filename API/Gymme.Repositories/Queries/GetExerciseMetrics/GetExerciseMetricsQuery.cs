@@ -21,6 +21,7 @@ namespace Gymme.Repositories.Queries.GetExerciseMetrics
 
                 var metricsId = context.WorksheetExerciseMetricsEntity
                                         .Where(s => s.WorksheetExerciseId == worksheetExerciseId)
+                                        .OrderByDescending(s => s.MetricsDate)
                                         .Select(s => s.MetricsId).FirstOrDefault();
 
                 return context.MetricsEntity

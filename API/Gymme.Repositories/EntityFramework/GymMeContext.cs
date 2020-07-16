@@ -67,6 +67,7 @@ namespace Gymme.Repositories.EntityFramework
                 entity.HasKey(e => e.Id);
                 entity.Property(s => s.MetricsId).HasColumnName("id_metrics");
                 entity.Property(s => s.WorksheetExerciseId).HasColumnName("id_worksheet_exercise");
+                entity.Property(s => s.MetricsDate).HasColumnName("metric_date");
             });
 
             modelBuilder.Entity<MetricsEntity>(entity =>

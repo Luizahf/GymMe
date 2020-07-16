@@ -32,7 +32,7 @@ namespace Gymme.Api.Controllers
             var result = await DataProvider.Query(query);
             result.ForEach(x =>
             {
-                exerciseList.Add(new ExerciseEntity(x.ExerciseDescription) { Id = x.Id });
+                exerciseList.Add(new ExerciseEntity(x.ExerciseDescription) { Id = x.ExerciseId });
 
             });
             return Ok(exerciseList);
