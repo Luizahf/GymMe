@@ -2,7 +2,9 @@ package com.gymme.data.api
 
 import com.gymme.data.data.Base.*
 import retrofit2.Call
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
 
 
@@ -23,4 +25,7 @@ interface GymMeApi {
 
     @GET("practiceWorksheets/{practiceId}/worksheets")
     fun getPracticeWorksheets(@Path("practiceId") practiceId: Int) : Call<List<WorksheetEntity>>?
+
+    @POST("metrics/insert")
+    fun insertExerciseMetrics(@Body newExerciseMetrics: InsertWorksheetExerciseMetricsRequest) : Call<WorksheetExerciseMetricsEntity>?
 }

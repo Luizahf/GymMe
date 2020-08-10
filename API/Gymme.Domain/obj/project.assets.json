@@ -7055,8 +7055,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Luiza\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Luiza\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -7067,9 +7066,6 @@
       "packagesPath": "C:\\Users\\Luiza\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\API\\Gymme.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\Luiza\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -7119,10 +7115,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

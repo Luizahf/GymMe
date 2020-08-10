@@ -1232,6 +1232,9 @@ id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id execution_time
+id execution_time_down
+id execution_time_up
 id exercise_description
 id exitUntilCollapsed
 id expand_activities_button
@@ -1261,6 +1264,7 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id kg
 id labeled
 id largeLabel
 id left
@@ -1270,7 +1274,8 @@ id line3
 id listMode
 id list_item
 id load
-id load2
+id load_down
+id load_up
 id masked
 id media_actions
 id message
@@ -1300,9 +1305,12 @@ id progress_circular
 id progress_horizontal
 id radio
 id repetitions
+id repetitions_down
+id repetitions_up
 id right
 id right_icon
 id right_side
+id s
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1325,6 +1333,8 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id series
+id series_down
+id series_up
 id shortcut
 id showCustom
 id showHome
@@ -1391,6 +1401,7 @@ id wide
 id withText
 id wrap
 id wrap_content
+id x
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
