@@ -14,10 +14,8 @@ namespace Gymme.Repositories.Queries.GetWorkSheetExercises
         {
             using (var context = new GymMeContext())
             {
-                var worksheetEx = context.WorksheetExerciseEntity
+                return context.WorksheetExerciseEntity
                                           .Where(s => s.WorksheetId == input.WorksheetId).ToList();
-
-                return worksheetEx;
             }
 
         }

@@ -1,15 +1,15 @@
 #Internal package file, do not edit.
-#Tue Aug 11 17:53:19 GMT-03:00 2020
-1.base=C\:\\Users\\134001\\source\\repos\\GymMe\\APP\\wear\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Wed Aug 12 11:04:25 BRT 2020
+1.base=C\:\\Users\\Luiza\\Documents\\IGTI\\GymMe\\APP\\wear\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 2.path=classes.dex
 0.baseType=DIRECTORY
-2.base=C\:\\Users\\134001\\source\\repos\\GymMe\\APP\\wear\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+2.base=C\:\\Users\\Luiza\\Documents\\IGTI\\GymMe\\APP\\wear\\build\\intermediates\\transforms\\dexMerger\\debug\\3
 2.set=DEX
 1.baseType=DIRECTORY
 count=3
 1.set=DEX
 0.path=classes.dex
 0.set=DEX
-0.base=C\:\\Users\\134001\\source\\repos\\GymMe\\APP\\wear\\build\\intermediates\\transforms\\dexMerger\\debug\\3
+0.base=C\:\\Users\\Luiza\\Documents\\IGTI\\GymMe\\APP\\wear\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 2.baseType=DIRECTORY
 1.path=classes.dex

@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/APP.iml" filepath="$PROJECT_DIR$/APP.iml" group="APP" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/APP-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/APP-app.iml" group="APP/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wear/APP-wear.iml" filepath="$PROJECT_DIR$/.idea/modules/wear/APP-wear.iml" group="APP/wear" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GymMe-APP.iml" filepath="$PROJECT_DIR$/.idea/modules/GymMe-APP.iml" group="APP" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="APP/app" />
       <module fileurl="file://$PROJECT_DIR$/wear/wear.iml" filepath="$PROJECT_DIR$/wear/wear.iml" group="APP/wear" />
     </modules>

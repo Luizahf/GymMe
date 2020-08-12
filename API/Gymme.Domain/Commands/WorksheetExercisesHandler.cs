@@ -35,7 +35,7 @@ namespace Gymme.Domain.Commands
             await DataProvider.InsertAsync(ex);
             await DataProvider.InsertAsync(worksheet);
 
-            var newWorksheetExercises = new WorksheetExerciseEntity(worksheet.Id, ex.Id, ex.Description);
+            var newWorksheetExercises = new WorksheetExerciseEntity(worksheet.Id, ex.Id);
             await DataProvider.InsertAsync(newWorksheetExercises);
             return newWorksheetExercises;
         }

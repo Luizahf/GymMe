@@ -8,16 +8,14 @@ namespace Gymme.Repositories.Entities
         public WorksheetExerciseEntity()
         {
         }
-        public WorksheetExerciseEntity(int worksheetId, int exerciseId, string exerciseDescription)
+        public WorksheetExerciseEntity(int worksheetId, int exerciseId)
         {
             WorksheetId = worksheetId;
             ExerciseId = exerciseId;
-            ExerciseDescription = exerciseDescription;
         }
 
         public int WorksheetId { get; set; }
         public int ExerciseId { get; set; }
-        public string ExerciseDescription { get; set; }
 
         internal override IEnumerable<string> CheckIntegrity()
         {

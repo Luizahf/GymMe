@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\134001\\source\\repos\\GymMe\\APP\\wear\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "C:\\Users\\Luiza\\Documents\\IGTI\\GymMe\\APP\\wear\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\134001\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\f70688ea87d3bfe2a3aabbef351136ce\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\Luiza\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\87bacf27a4b1133f434ca9ecfa84f24b\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\134001\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.0.0.aar\\88ca17c76cd45bfda0dedb88ad80a38c\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\Luiza\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.0.0.aar\\170e219750edebad26c1917103a29683\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

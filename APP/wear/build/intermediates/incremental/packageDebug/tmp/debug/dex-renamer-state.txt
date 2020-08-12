@@ -1,10 +1,10 @@
-#Wed Aug 12 08:36:45 GMT-03:00 2020
+#Wed Aug 12 11:04:23 BRT 2020
 path.2=classes.dex
 path.1=classes.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=C\:\\Users\\134001\\source\\repos\\GymMe\\APP\\wear\\build\\intermediates\\transforms\\dexMerger\\debug\\1
-base.1=C\:\\Users\\134001\\source\\repos\\GymMe\\APP\\wear\\build\\intermediates\\transforms\\dexMerger\\debug\\3
-base.0=C\:\\Users\\134001\\source\\repos\\GymMe\\APP\\wear\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+base.2=C\:\\Users\\Luiza\\Documents\\IGTI\\GymMe\\APP\\wear\\build\\intermediates\\transforms\\dexMerger\\debug\\3
+base.1=C\:\\Users\\Luiza\\Documents\\IGTI\\GymMe\\APP\\wear\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+base.0=C\:\\Users\\Luiza\\Documents\\IGTI\\GymMe\\APP\\wear\\build\\intermediates\\transforms\\dexMerger\\debug\\1

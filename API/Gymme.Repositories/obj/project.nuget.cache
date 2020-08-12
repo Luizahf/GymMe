@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IzZ3XR3CSpQYN9WxQtBmbn8v98kK8O30SXPQTeYXjOMi36uWn6L5k9ATaQEu7XBK/VI27sQz/ApdlAckIvFzcg==",
+  "dgSpecHash": "SOlOOkubEGEODGCstrX6t3X90QfZHWBuC0ERJjjcflXsLmhFVuWMVDAu4h6GqAkgOELqBL4HtlT+DY2TUXjDyg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\API\\Gymme.Repositories\\Gymme.Repositories.csproj",
+  "projectFilePath": "C:\\Users\\Luiza\\Documents\\IGTI\\GymMe\\API\\Gymme.Repositories\\Gymme.Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luiza\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\Luiza\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",
