@@ -1,7 +1,10 @@
 ﻿using Gymme.Repositories.Abstractions;
 using Gymme.Repositories.Entities;
+using Gymme.Repositories.Queries.GetWorkSheetExercises;
+using Gymme.Repositories.Queries.GetExercises;
 using MediatR;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -10,20 +13,23 @@ namespace Gymme.Domain.Commands.Exercises
     internal class GetWorksheetExercisesHandler : IRequestHandler<GetWorksheetExercisesCommand, List<ExerciseEntity>>
     {
         private IDataProvider DataProvider { get; }
+        private IMediator Mediator { get; }
 
-        public GetWorksheetExercisesHandler(IDataProvider dataProvider)
+        public GetWorksheetExercisesHandler(IDataProvider dataProvider, IMediator mediator)
         {
             DataProvider = dataProvider;
+            Mediator = mediator;
         }
 
-        Task<List<ExerciseEntity>> IRequestHandler<GetWorksheetExercisesCommand, List<ExerciseEntity>>.Handle(GetWorksheetExercisesCommand request, CancellationToken cancellationToken)
+        public async Task<List<ExerciseEntity>> Handle(GetWorksheetExercisesCommand request, CancellationToken cancellationToken)
         {
-            var result = new List<ExerciseEntity>();
-            //var oi = DataProvider.GetAll
+            var getWorksheetExercises = new GetWorkSheetExercisesQueryInput(request.WorksheetId);
+            var worksheetExercises = await DataProvider.Query(getWorksheetExercises);
 
-            //result = DataProvider.GetById<UserEntity>(request.Id);
+            var getExercises = new GetExercisesQueryInput(worksheetExercises.Select(we => we.ExerciseId).ToList());
+            var exercises = await DataProvider.Query(getExercises);
 
-            return Task.FromResult(result);
+            return exercises.ToList();
         }
     }
 }

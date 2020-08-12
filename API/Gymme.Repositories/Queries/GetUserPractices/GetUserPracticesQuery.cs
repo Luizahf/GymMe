@@ -1,4 +1,5 @@
-﻿using Gymme.Repositories.Abstractions.Query;
+﻿
+using Gymme.Repositories.Abstractions.Query;
 using Gymme.Repositories.EntityFramework;
 using Gymme.Repositories.Entities;
 using System.Collections.Generic;

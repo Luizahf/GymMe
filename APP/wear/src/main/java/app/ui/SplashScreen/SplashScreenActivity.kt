@@ -23,6 +23,7 @@ class SplashScreenActivity : AppCompatActivity(), View.OnClickListener {
         when (id) {
             R.id.btn_start -> {
                 startActivity(Intent(this, ChoosePracticeActivity::class.java))
+                finish()
             }
         }
     }

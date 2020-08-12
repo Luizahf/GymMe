@@ -34,7 +34,7 @@ namespace Gymme.Domain.Commands.Metrics
             var insertNewMetrics = await DataProvider.InsertAsync(newMetrics);
             
             var newWorksheetExerciseMetrics = new WorksheetExerciseMetricsEntity(worksheetExercises
-                                                .Where(we => we.ExerciseId == request.ExerciseId).FirstOrDefault().WorksheetId, newMetrics.Id, DateTime.Now);
+                                                .Where(we => we.ExerciseId == request.ExerciseId).FirstOrDefault().Id, newMetrics.Id, DateTime.Now);
             var insertNewWorksheetExerciseMetrics  = await DataProvider.InsertAsync(newWorksheetExerciseMetrics);
             
             var getWorksheetExerciseMetrics = new GetExerciseMetricsQueryInput(request.ExerciseId, request.WorksheetId);

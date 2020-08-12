@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Luiza\\Documents\\IGTI\\IGTI_GymMe-master\\APP\\wear\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rCA\\values-en-rCA.xml",
+            "outputFile": "C:\\Users\\134001\\source\\repos\\GymMe\\APP\\wear\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rCA\\values-en-rCA.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Luiza\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\87bacf27a4b1133f434ca9ecfa84f24b\\res\\values-en-rCA\\values-en-rCA.xml",
+                    "source": "C:\\Users\\134001\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\f70688ea87d3bfe2a3aabbef351136ce\\res\\values-en-rCA\\values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Luiza\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.2.0.aar\\8b3a500faf1b48ba70190ed48acf4b29\\res\\values-en-rCA\\values-en-rCA.xml",
+                    "source": "C:\\Users\\134001\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.2.0.aar\\b75240138051898928b50521525511bb\\res\\values-en-rCA\\values-en-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

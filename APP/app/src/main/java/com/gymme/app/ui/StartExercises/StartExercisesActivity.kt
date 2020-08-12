@@ -14,7 +14,6 @@ import com.gymme.Shared.Constants
 import com.gymme.app.ui.SplashScreen.SplashScreenActivity
 import com.gymme.data.data.Base.MetricsEntity
 import com.gymme.domain.entities.CompleteExercise
-import com.gymme.domain.entities.Metrics
 import com.gymme.domain.entities.Practice
 import com.gymme.domain.entities.Worksheet
 import kotlinx.android.synthetic.main.start_exercises.*

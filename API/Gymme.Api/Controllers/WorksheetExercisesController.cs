@@ -7,6 +7,7 @@ using MediatR;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Gymme.Domain.Commands.Exercises;
 
 namespace Gymme.Api.Controllers
 {
@@ -27,15 +28,8 @@ namespace Gymme.Api.Controllers
         [HttpGet("{worksheetId}/exercises")]
         public async Task<ActionResult<List<ExerciseEntity>>> GetWorkSheetExercises(int worksheetId)
         {
-            var exerciseList = new List<ExerciseEntity>();
-            var query = new GetWorkSheetExercisesQueryInput(worksheetId);
-            var result = await DataProvider.Query(query);
-            result.ForEach(x =>
-            {
-                exerciseList.Add(new ExerciseEntity(x.ExerciseDescription) { Id = x.ExerciseId });
-
-            });
-            return Ok(exerciseList);
+            var result = await Mediator.Send(new GetWorksheetExercisesCommand(worksheetId));
+            return Ok(result);
         }
 
         [HttpPost("insert")]

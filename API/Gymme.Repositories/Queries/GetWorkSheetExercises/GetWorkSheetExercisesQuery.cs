@@ -14,21 +14,10 @@ namespace Gymme.Repositories.Queries.GetWorkSheetExercises
         {
             using (var context = new GymMeContext())
             {
-                var exercisesIds = context.WorksheetExerciseEntity
-                                          .Where(s => s.WorksheetId == input.WorksheetId)
-                                          .Select(s => s.ExerciseId);
+                var worksheetEx = context.WorksheetExerciseEntity
+                                          .Where(s => s.WorksheetId == input.WorksheetId).ToList();
 
-                var result = new List<WorksheetExerciseEntity>();
-                
-                var exercises = context.ExerciseEntity
-                                        .Where(s => exercisesIds.Contains(s.Id))
-                                        .ToList();
-                exercises.ForEach(ex =>
-                {
-                    result.Add(new WorksheetExerciseEntity(input.WorksheetId, ex.Id, ex.Description));
-                });
-
-                return result;
+                return worksheetEx;
             }
 
         }

@@ -6,21 +6,17 @@ import android.os.Bundle
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
-import android.view.WindowManager
-import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.MotionEventCompat
 import androidx.lifecycle.Observer
 import com.gymme.R
 import com.gymme.app.ui.SplashScreen.SplashScreenActivity
 import com.gymme.data.data.Base.MetricsEntity
 import com.gymme.domain.entities.CompleteExercise
-import com.gymme.domain.entities.Exercise
 import kotlinx.android.synthetic.main.start_exercises.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class StartExercisesActivity : AppCompatActivity(), View.OnClickListener, View.OnTouchListener {
+class StartExercisesActivity : AppCompatActivity(), View.OnClickListener {
     private val startExercisesViewModel: StartExercisesViewModel by viewModel()
     var exerciseList: List<CompleteExercise> = mutableListOf()
     private var exercise: Int = 0
@@ -29,21 +25,20 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener, View.O
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.start_exercises)
-
-        imageView.setOnTouchListener(object : OnSwipeTouchListener()) {
-            override fun onSwipeLeft() {
-            }
-
-            override fun onSwipeRight() {
-            }
-        })
-
         worksheetId = intent.getStringExtra(Constants.WORKSHEET_ID)
         startExercisesViewModel.getWorksheetExercises(worksheetId.toInt())
 
         btn_right.setOnClickListener(this)
         btn_left.setOnClickListener(this)
         btn_finish.setOnClickListener(this)
+        series_up.setOnClickListener(this)
+        series_down.setOnClickListener(this)
+        repetitions_up.setOnClickListener(this)
+        repetitions_down.setOnClickListener(this)
+        load_up.setOnClickListener(this)
+        load_down.setOnClickListener(this)
+        execution_time_up.setOnClickListener(this)
+        execution_time_down.setOnClickListener(this)
 
         startExercisesViewModel.exercisesList.observe(this, Observer {
             it?.let {
@@ -112,37 +107,37 @@ class StartExercisesActivity : AppCompatActivity(), View.OnClickListener, View.O
                 startActivity(Intent(this, SplashScreenActivity::class.java))
             }
             R.id.series_up -> {
-                series.setText((series.toString().toInt() + 1))
+                series.setText((series.text.toString().toInt() + 1).toString())
             }
             R.id.repetitions_up -> {
-                repetitions.setText((repetitions.toString().toInt() + 1))
+                repetitions.setText((repetitions.text.toString().toInt() + 1).toString())
             }
             R.id.load_up -> {
-                load.setText((load.toString().toInt() + 1))
+                load.setText((load.text.toString().toInt() + 1).toString())
             }
             R.id.execution_time_up -> {
-                execution_time.setText((execution_time.toString().toInt() + 1))
+                execution_time.setText((execution_time.text.toString().toInt() + 1).toString())
             }
             R.id.series_down -> {
-                series.setText((series.toString().toInt() - 1))
+                series.setText((series.text.toString().toInt() - 1).toString())
             }
             R.id.repetitions_down -> {
-                repetitions.setText((repetitions.toString().toInt() - 1))
+                repetitions.setText((repetitions.text.toString().toInt() - 1).toString())
             }
             R.id.load_down -> {
-                load.setText((load.toString().toInt() - 1))
+                load.setText((load.text.toString().toInt() - 1).toString())
             }
             R.id.execution_time_down -> {
-                execution_time.setText((execution_time.toString().toInt() - 1))
+                execution_time.setText((execution_time.text.toString().toInt() - 1).toString())
             }
         }
     }
 
     private fun changedMetrics() : Boolean {
         return (series.text.toString() != exerciseList[exercise].metrics.Series.toString() ||
-                repetitions.toString() != exerciseList[exercise].metrics.Repetitions.toString() ||
-                execution_time.toString() != exerciseList[exercise].metrics.ExecutionTime.toString() ||
-                load.toString() != exerciseList[exercise].metrics.Load.toString())
+                repetitions.text.toString() != exerciseList[exercise].metrics.Repetitions.toString() ||
+                execution_time.text.toString() != exerciseList[exercise].metrics.ExecutionTime.toString() ||
+                load.text.toString() != exerciseList[exercise].metrics.Load.toString())
 
     }
 
