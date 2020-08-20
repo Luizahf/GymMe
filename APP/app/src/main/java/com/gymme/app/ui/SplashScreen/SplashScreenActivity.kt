@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.gymme.R
+import com.gymme.Shared.Constants
 import com.gymme.app.ui.Login.LoginActivity
 import com.gymme.app.ui.MyWorksheet.MyWorksheetActivity
 import com.gymme.app.ui.StartExercises.StartExercisesActivity
@@ -29,10 +30,14 @@ class SplashScreenActivity : AppCompatActivity(), View.OnClickListener {
 
         when (id) {
             R.id.btn_worksheet -> {
-                startActivity(Intent(this, MyWorksheetActivity::class.java))
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.putExtra(Constants.GO_TO_START_EXERCISES, "false")
+                startActivity(intent)
             }
             R.id.btn_new_workout -> {
-                startActivity(Intent(this, LoginActivity::class.java))
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.putExtra(Constants.GO_TO_START_EXERCISES, "true")
+                startActivity(intent)
             }
         }
     }

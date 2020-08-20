@@ -7,16 +7,19 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.gymme.R
+import com.gymme.domain.entities.CompleteExercise
+import com.gymme.domain.entities.CompleteWorksheet
 import kotlinx.android.synthetic.main.worksheet_layout.view.*
-import java.util.ArrayList
 
 class WorksheetAdapter (private val context: Context,
+                        ExerciseList: List<CompleteWorksheet>,
                         WorksheetExerciseViewId: Int,
                         ExerciseDescriptionId: Int,
-                        val clickListenerStart: () -> Unit) :
+                        val clickListenerStart: (Int) -> Unit) :
                         RecyclerView.Adapter<WorksheetAdapter.ViewHolder>() {
     val worksheetExerciseViewId: Int = WorksheetExerciseViewId
     val exerciseDescriptionId = ExerciseDescriptionId
+    val exerciseList = ExerciseList
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.worksheet_layout, viewGroup, false)
@@ -25,9 +28,10 @@ class WorksheetAdapter (private val context: Context,
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-        holder.let {
-            it.bindView(worksheetExerciseViewId, exerciseDescriptionId)
+        if (position < exerciseList.size) {
+            holder.let {
+                it.bindView(worksheetExerciseViewId, exerciseDescriptionId, exerciseList[position], position, clickListenerStart)
+            }
         }
     }
 
@@ -36,28 +40,18 @@ class WorksheetAdapter (private val context: Context,
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bindView(WorksheetExerciseViewId: Int, exerciseDescriptionId: Int) {
+        fun bindView(WorksheetExerciseViewId: Int, exerciseDescriptionId: Int, exerciseList: CompleteWorksheet, position: Int, clickListenerStart: (Int) -> Unit) {
+            itemView.start_workout.setOnClickListener { clickListenerStart(position) }
+            val exercises = itemView.exercises
+            itemView.worksheet_title.text = "FICHA " + exerciseList.worksheetName
 
-            // Creating the exercise list
-            val exerciseList = itemView.exercises
-
-            // Instanciating an array list will come from the API later
-            val your_array_list = ArrayList<String>()
-            your_array_list.add("Agachamento")
-            your_array_list.add("Desenvolvimento")
-            your_array_list.add("Afundo")
-            your_array_list.add("Rosca Direta")
-
-            // This is the array adapter, it takes the context of the activity as a
-            // first parameter, the type of list view as a second parameter and your
-            // array as a third parameter.
             val arrayAdapter = ArrayAdapter<String>(
-                    itemView.getContext(),
+                    itemView.context,
                     WorksheetExerciseViewId,
                     exerciseDescriptionId,
-                    your_array_list)
+                    exerciseList.exercises.map { it.exercise.description })
 
-            exerciseList.setAdapter(arrayAdapter)
+            exercises.adapter = arrayAdapter
         }
     }
 }

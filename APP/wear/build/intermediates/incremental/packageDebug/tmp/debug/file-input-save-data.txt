@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Aug 12 11:04:25 BRT 2020
+#Wed Aug 12 11:40:35 BRT 2020
 1.base=C\:\\Users\\Luiza\\Documents\\IGTI\\GymMe\\APP\\wear\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 2.path=classes.dex
 0.baseType=DIRECTORY

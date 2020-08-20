@@ -25,6 +25,10 @@ val UIModules = module {
     viewModel {
         MyWorksheetViewModel(
                 get(),
+                get(),
+                get(),
+                get(),
+                get(),
                 get()
         )
     }

@@ -7,6 +7,12 @@ namespace Gymme.Repositories.Entities
 {
     public class WorksheetEntity : EntityBase
     {
+        public WorksheetEntity(string description, int practiceId)
+        {
+            Description = description;
+            PracticeId = practiceId;
+        }
+
         public string Description { get; set; }
         public int PracticeId { get; set; }
 
